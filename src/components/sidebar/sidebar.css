@@ -1,0 +1,13 @@
+/* CSS for sidebar */
+
+@import '../../global.css';
+
+.sidebar-container {
+    width: 80px;
+    height: 100vh;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: var(--background);
+}

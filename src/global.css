@@ -1,0 +1,150 @@
+/* Global CSS, font styles and typefaces */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Raleway:wght@300;400;500;600&display=swap');
+
+html,body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* these colors remain same irrespective of theme */
+    --blue : #0186D2;
+    --yellow : #FFDB00;
+    --green : #02B93F;
+    --lightgrey : #ABABAB;
+    --mediumgrey : #818181;
+    --darkgrey : #6D6D6D;
+    --tan : #252525;
+    --black : #1B1B1B;
+
+    /* these colors change according to theme */
+    --background : #FFFFFF;
+    --primary : #1B1B1B;
+}
+
+
+/* Text styles */
+
+/* Headings */
+
+.h0 {
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: 60px;
+    letter-spacing: -1.5px;
+    margin: 0;
+    padding: 0;
+}
+
+.h1 {
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: 45px;
+    letter-spacing: -0.5px;
+    margin: 0;
+    padding: 0;
+}
+
+.h2 {
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.h3 {
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.h4 {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.h5 {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Normal text */
+
+.t0 {
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: 0px;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+}
+
+.t1 {
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 0px;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+}
+
+.t2 {
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0px;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+}
+
+
+/* Classes for text alignment */
+
+.ta-center {
+    width: 100%;
+    text-align: center;
+}
+
+.ta-left {
+    width: 100%;
+    text-align: left;
+}
+
+.ta-right {
+    width: 100%;
+    text-align: right;
+}
+
+
+/* Other global CSS classes */
+
+.section-container {
+    width: 100%;
+    padding-left: 80px;
+    min-height: 200px;
+    background-color: cadetblue; 
+    margin-bottom: 10px;
+}

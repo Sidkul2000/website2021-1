@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react'
+import { BrowserRouter , Route , Switch } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import About from './components/about/About'
+import Activities from './components/activities/Activities'
+import Footer from './components/footer/Footer'
+import Landing from './components/landing/Landing'
+import RecentWorks from './components/recent-works/RecentWorks'
+import Sidebar from './components/sidebar/Sidebar'
+import Team from './components/team/Team'
+
+import { ThemeProvider } from "./context/ThemeContext"
+
+const App = ({}) => {
+    return (
+        <div>
+            <ThemeProvider>
+                <BrowserRouter>
+                    <Switch>
+                       
+                       <Route path="/" render={props => 
+                           <Fragment>
+                               <Landing {...props}/>
+                               <About {...props}/>
+                               <RecentWorks {...props}/>
+                               <Team {...props}/>
+                               <Activities {...props}/>
+                               <Footer {...props}/>
+                               <Sidebar/>
+                           </Fragment>
+                       }/>
+
+                    </Switch>
+                </BrowserRouter>
+            </ThemeProvider>
+        </div>
+    )
 }
 
-export default App;
+export default App
