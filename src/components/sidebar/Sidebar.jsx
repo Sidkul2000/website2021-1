@@ -1,10 +1,11 @@
-import React from 'react'
-import { Box, Home, TrendingUp, Users, Moon, Sun } from 'react-feather'
+import React, { useEffect, useState } from 'react'
+import { Box, Home, TrendingUp, Users, Moon, Sun, DivideCircle } from 'react-feather'
 import { useTheme } from '../../context/ThemeContext'
 import Toggle from 'react-toggle'
 import "react-toggle/style.css"
 
 import './sidebar.css'
+import { isElementInViewport } from '../../utils'
 
 const menuList = [
     {
@@ -25,13 +26,41 @@ const Sidebar = ({
     props
 }) => {
     
+    
     const { theme , setTheme } = useTheme()
+    const [activePage, setActivePage] = useState(0)
 
-    const handleThemeChange = () => {
-        if(theme === 'dark') {
-            setTheme('light')
-        } else setTheme('dark')
+
+    const handleThemeChange = () => theme === 'dark' ? setTheme('light') : setTheme('dark')
+  
+
+    const pages = ['landing', 'about', 'team', 'activities']
+
+    // runs when we scroll, checks if div is in viewport
+    const handleScroll = () => {
+       
+        pages.forEach((page, index) => {
+        
+            let pageClass = `${page}-container`
+            let element = document.querySelector(`.${pageClass}`)
+            
+            if(isElementInViewport(element)) {
+                setActivePage(index)
+            }
+        })
     }
+
+    // Scroll active section into view on menu item click
+    const handleMenuClick = handleID => {
+        
+        let activeSection = document.querySelector(`.${pages[handleID]}-container`) 
+        activeSection.scrollIntoView({behavior: 'smooth'})
+
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+    }, [])
 
     return (
         <div className="sidebar-container">
@@ -42,15 +71,18 @@ const Sidebar = ({
 
             <div className="menu-container">
                 {
-                    menuList.map(item => {
+                    menuList.map((item, index) => {
                         return (
-                            <div className="menu-option">
-                                {item.icon}
-                                
+                            <div 
+                                className={index === activePage ? "menu-option active-menu" : "menu-option"}
+                                onClick={() => handleMenuClick(index)}
+                            >
+                                {item.icon} 
                             </div>
                         )
                     })
                 }
+                {activePage}
             </div>
 
             <div className="app-logo-container">
