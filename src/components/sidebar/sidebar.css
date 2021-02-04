@@ -9,5 +9,52 @@
     top: 0;
     left: 0;
     position: fixed;
-    background-color: var(--background);
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-logo-container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gold;
+}
+
+.menu-container {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80% 0;
+}
+
+.menu-option {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    color: var(--darkgrey);
+}
+
+.menu-option:hover {
+    color: var(--lightgrey);
+    transition: 0.25s ease-in-out;
+}
+
+.menu-icon {
+    width: 24px;
+    color: inherit;
+    height: 24px;
 }
