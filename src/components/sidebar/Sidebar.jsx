@@ -1,6 +1,8 @@
 import React from 'react'
-import { Box, Home, TrendingUp, Users } from 'react-feather'
+import { Box, Home, TrendingUp, Users, Moon, Sun } from 'react-feather'
 import { useTheme } from '../../context/ThemeContext'
+import Toggle from 'react-toggle'
+import "react-toggle/style.css"
 
 import './sidebar.css'
 
@@ -25,6 +27,12 @@ const Sidebar = ({
     
     const { theme , setTheme } = useTheme()
 
+    const handleThemeChange = () => {
+        if(theme === 'dark') {
+            setTheme('light')
+        } else setTheme('dark')
+    }
+
     return (
         <div className="sidebar-container">
         
@@ -46,8 +54,15 @@ const Sidebar = ({
             </div>
 
             <div className="app-logo-container">
-                <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Change theme</button>
-                {theme}
+                <Toggle
+					defaultChecked={theme === 'light'}
+					icons={{ 
+						checked: <Moon size={17} color="#6D6D6D" style={{position: "absolute", top: -3, transform:'rotate(90deg)', left: -2}}/>,
+						unchecked: <Sun size={14} color="#FFF" style={{position: "absolute", top: -2,}}/>,
+					}}
+					className="toggle"
+					onChange={handleThemeChange} 
+				/>
             </div>
 
         
