@@ -15,18 +15,18 @@ html,body {
 :root {
 
     /* these colors remain same irrespective of theme */
-    --blue : #0186D2;
+    --blue : #0085FF;
     --yellow : #FFDB00;
     --green : #02B93F;
     --lightgrey : #ABABAB;
     --mediumgrey : #818181;
     --darkgrey : #6D6D6D;
     --tan : #252525;
-    --black : #1B1B1B;
+    --black : #171717;
 
     /* these colors change according to theme */
     --background : #FFFFFF;
-    --primary : #1B1B1B;
+    --primary : #171717;
 }
 
 
@@ -37,10 +37,11 @@ html,body {
 .h0 {
     font-family: Poppins;
     font-weight: 800;
-    font-size: 60px;
-    letter-spacing: -1.5px;
+    font-size: 65px;
+    letter-spacing: -1px;
     margin: 0;
     padding: 0;
+    line-height: 90px;
 }
 
 .h1 {
@@ -74,7 +75,7 @@ html,body {
     font-family: Poppins;
     font-weight: 700;
     font-size: 20px;
-    letter-spacing: 0px;
+    letter-spacing: 1px;
     margin: 0;
     padding: 0;
 }
@@ -143,8 +144,16 @@ html,body {
 
 .section-container {
     width: 100%;
-    padding-left: 80px;
+    padding-left: 100px;
     min-height: 200px;
     background-color: cadetblue; 
     margin-bottom: 10px;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+.blue {
+    color: var(--blue);
 }
