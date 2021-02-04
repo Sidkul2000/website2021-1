@@ -7,7 +7,7 @@ const Activities = ({
 }) => {
     
     return (
-        <div className="section-container">
+        <div className="section-container activities-container">
             Activities
         </div>
     )

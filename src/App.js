@@ -5,7 +5,6 @@ import About from './components/about/About'
 import Activities from './components/activities/Activities'
 import Footer from './components/footer/Footer'
 import Landing from './components/landing/Landing'
-import RecentWorks from './components/recent-works/RecentWorks'
 import Sidebar from './components/sidebar/Sidebar'
 import Team from './components/team/Team'
 
@@ -22,7 +21,6 @@ const App = ({}) => {
                            <Fragment>
                                <Landing {...props}/>
                                <About {...props}/>
-                               <RecentWorks {...props}/>
                                <Team {...props}/>
                                <Activities {...props}/>
                                <Footer {...props}/>

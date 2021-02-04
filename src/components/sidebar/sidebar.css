@@ -48,7 +48,11 @@
     color: var(--lightgrey);
 }
 
-.menu-option:hover {
+.active-menu {
+    color: var(--blue);
+}
+
+.menu-option:hover:not(.active-menu) {
     color: var(--darkgrey);
     transition: 0.25s ease-in-out;
 }
