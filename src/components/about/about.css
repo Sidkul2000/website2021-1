@@ -1,3 +1,280 @@
 /* CSS for about page */
 
 @import '../../global.css';
+
+.about-container {
+    width: 100%;
+    background-color: var(--background);
+}
+
+.curve-div {
+    width: 100%;
+    background-color: transparent;
+    height: 55px;
+    overflow-y: hidden;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+}
+.curve {
+   width: 10%;
+}
+
+.about-title {
+    font-weight: 700;
+    width: 40%;
+    padding: 0 20px;
+    text-align: center;
+    background-color: transparent;
+    position: absolute;
+    right: 100px;
+}
+
+.about-title .h2.primary {
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.features-container {
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.feature {
+    width: 28%;
+    height: 400px;
+    border-radius: 10px;
+    background-color: #ABABAB1a;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 8px solid transparent;
+}
+
+.feature-title {
+    text-align: center;
+    background-size: 200% auto;
+    color: red;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: shine 10s linear infinite;
+    animation: shine 10s linear infinite;
+}
+
+.feature-0 {
+    animation: float2 3s ease-in-out infinite;
+    margin-top: 4%;
+    border-bottom-color: var(--yellow)
+}
+.feature-0 .feature-image-container {
+    margin-left: -15px;
+}
+.feature-title-0 {
+    text-align: center;
+    background: linear-gradient(to right, var(--yellow), 80%, #FFF, var(--yellow));
+    background-size: 200% auto;
+    color: red;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: shine 10s linear infinite;
+    animation: shine 10s linear infinite;
+}
+
+.feature-1 {
+    animation: float 3s ease-in-out infinite;
+    margin-top: 12%;
+    border-bottom-color: var(--green);
+}
+.feature-1 .feature-image-container {
+    margin-left: -15px;
+}
+.feature-title-1 {
+    text-align: center;
+    background: linear-gradient(to right, var(--green), 80%, #FFF, var(--green));
+    background-size: 200% auto;
+    color: red;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: shine 10s linear infinite;
+    animation: shine 10s linear infinite;
+}
+
+
+.feature-2 {
+    animation: float2 3s ease-in-out infinite;
+    margin-top: 20%;
+    border-bottom-color: var(--blue);
+}
+.feature-2 .feature-image-container {
+    margin-left: -15px;
+}
+.feature-title-2 {
+    text-align: center;
+    background: linear-gradient(to right, var(--blue), 80%, #FFF, var(--blue));
+    background-size: 200% auto;
+    color: red;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: shine 10s linear infinite;
+    animation: shine 10s linear infinite;
+}
+
+.feature-title {
+    text-align: center;
+    background-size: 200% auto;
+    color: red;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: shine 10s linear infinite;
+    animation: shine 10s linear infinite;
+}
+
+
+.feature-image-container {
+    width: calc(100% + 40px);
+    margin: 50px;
+    height: 80%;
+    padding: 0px;
+    background-color: transparent;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    transition: 0.25s ease-in;
+}
+
+.feature-image-container-hover {
+    width: calc(90%);
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    height: 68%;
+    padding: 20px 0;
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+    transition: 0.25s ease-in;
+}
+
+
+ 
+.feature-image-container-hover img {
+    width: 100%;
+    object-fit: fill;
+    transition: 0.25s ease-in-out !important;
+}
+
+.feature-info {
+    height: 20%;
+    overflow: hidden;
+    padding: 0 10%;
+    width: 100%;
+    transition: 0.25s ease-in-out;
+}
+
+.feature-info-hover {
+    height: 60%;
+    overflow: hidden;
+    padding: 0 10%;
+    width: 100%;
+    transition: 0.25s ease-in-out;
+}
+
+.itsa-def {
+    width: 100%;
+    padding: 80px 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.itsa-def-left {
+    width: 20%;
+    display: flex;
+    text-align: right;
+    align-items: center;
+}
+
+.itsa-def-right {
+    width: 80%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.itsa-def-text {
+    text-align: right;
+    background: linear-gradient(to left,  var(--blue), 33%,  rgb(83, 27, 214), rgb(75, 116, 250));
+    background-size: 200% auto;
+    color: red;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: shine 10s linear infinite;
+    animation: shine 10s linear infinite;
+    padding-left: 10%;
+    font-weight: 800;
+    padding-right: 10px;
+}
+
+.itsa-desc-text {
+    padding-left: 60px;
+    width: 90%;
+    font-size: 17px;
+}
+
+.recentworks-text {
+    margin: 50px auto;
+}
+
+.sticky-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.horizontal-translate-container {
+    position: absolute;
+    height: calc(100% - 230px);
+    will-change: transform;
+}
+
+.cards-container {
+    position: relative;
+    height: 100%;
+    padding: 0 0 0 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sample-card {
+    position: relative;
+    height: 70vh;
+    width: 500px;
+    background-color: #ABABAB10;
+    margin-right: 20px;
+    flex-shrink: 0;
+    border-radius: 10px;
+}

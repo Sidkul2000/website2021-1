@@ -14,13 +14,23 @@ const Landing = ({
 
     useEffect(() => {
         let scene = document.getElementById('scene')
-        new Parallax(scene)
+        new Parallax(scene, {
+            invertX: false,
+            invertY: false,
+            clipRelativeInput: true,
+            scalarX: 7,
+            scalarY: 7
+        })
     })
 
-    const transitionDelay = 1000 * 1.25
-    const colors = useRainbow({intervalDelay: 1000})
-    const colorKeys = Object.keys(colors)
-    
+    const goToAbout = () => {
+        window.scrollTo({
+            top: window.innerHeight * 0.95,
+            left: 0,
+            behavior: 'smooth'
+        })
+    }
+
     return (
         <div className="section-container landing-container">
             
@@ -59,7 +69,7 @@ const Landing = ({
                         Design driven
                     </p>
                     <p className="h0 ta-center white">
-                        Development
+                        development
                     </p>
                     <p className="h0 ta-center linear-wipe">
                         and more stuff
@@ -71,40 +81,11 @@ const Landing = ({
 
                 <p className="h4 blue" style={{fontWeight: 600}}>#ExploreToInspire</p>
 
-                <button 
-                    className="know-more-button"
-                    style={{
-                        ...colors,
-                        transition: `
-                          ${colorKeys[0]} ${transitionDelay}ms linear,
-                          ${colorKeys[1]} ${transitionDelay}ms linear,
-                          ${colorKeys[2]} ${transitionDelay}ms linear
-                        `,
-                        background: `
-                          radial-gradient(
-                            circle at top left,
-                            var(${colorKeys[2]}),
-                            var(${colorKeys[1]}),
-                            var(${colorKeys[0]})
-                          )
-                        `,
-                    }}
-                >
+                <button className="know-more-button" onClick={goToAbout}>
                     <p className="h5 white">Know More</p>
                 </button>
                 
             </div>
-            {/* <p className="h0">This is h0</p>
-            <p className="h1">This is h1</p>
-            <p className="h2">This is h2</p>
-            <p className="h3">This is h3</p>
-            <p className="h4">This is h4</p>
-            <p className="h5">This is h5</p>
-
-            <p className="t0">This is t0</p>
-            <p className="t1">This is t1</p>
-            <p className="t2">This is t2</p> */}
-            
 
         </div>
     )

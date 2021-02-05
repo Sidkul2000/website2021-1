@@ -6,10 +6,14 @@ html,body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    user-select: none;
+    border: none;
 }
 
 * {
     box-sizing: border-box;
+    user-select: none;
+    outline: none;
 }
 
 :root {
@@ -21,12 +25,16 @@ html,body {
     --lightgrey : #ABABAB;
     --mediumgrey : #818181;
     --darkgrey : #6D6D6D;
-    --tan : #252525;
-    --black : #171717;
+    --tan : #241414;
+    --black : #141414;
 
     /* these colors change according to theme */
     --background : #FFFFFF;
-    --primary : #171717;
+    --primary : #1B1B1B;
+}
+
+.primary {
+    color: var(--primary);
 }
 
 
@@ -38,7 +46,7 @@ html,body {
     font-family: Poppins;
     font-weight: 800;
     font-size: 65px;
-    letter-spacing: -1px;
+    letter-spacing: 0px;
     margin: 0;
     padding: 0;
     line-height: 90px;
@@ -46,7 +54,7 @@ html,body {
 
 .h1 {
     font-family: Poppins;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 45px;
     letter-spacing: -0.5px;
     margin: 0;
@@ -73,16 +81,16 @@ html,body {
 
 .h4 {
     font-family: Poppins;
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.5px;
     margin: 0;
     padding: 0;
 }
 
 .h5 {
     font-family: Poppins;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 15px;
     letter-spacing: 0px;
     margin: 0;
@@ -94,8 +102,8 @@ html,body {
 .t0 {
     font-family: Raleway;
     font-weight: 500;
-    font-size: 19px;
-    letter-spacing: 0px;
+    font-size: 15px;
+    letter-spacing: 0.7px;
     margin: 0;
     padding: 0;
     line-height: 25px;
@@ -104,17 +112,17 @@ html,body {
 .t1 {
     font-family: Raleway;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 13px;
     letter-spacing: 0px;
     margin: 0;
     padding: 0;
-    line-height: 25px;
+    line-height: 20px;
 }
 
 .t2 {
     font-family: Raleway;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 11px;
     letter-spacing: 0px;
     margin: 0;
     padding: 0;
@@ -147,7 +155,6 @@ html,body {
     padding-left: 100px;
     min-height: 200px;
     background-color: cadetblue; 
-    margin-bottom: 10px;
 }
 
 .white {
@@ -156,4 +163,45 @@ html,body {
 
 .blue {
     color: var(--blue);
+}
+
+.mediumgrey {
+    color: var(--mediumgrey);
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px) translateX(-2px) rotate(0.8deg);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(3px) translateX(3px) rotate(-0.3deg);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes shine {
+    from {
+      background-position: 200% center;
+    }
+  }
+  
+@keyframes shine {
+    from {
+      background-position: 200% center;
+    }
 }
