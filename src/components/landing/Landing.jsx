@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Parallax from 'parallax-js'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 import './landing.css'
 import parallaxgreen from '../../assets/parallax-green.svg'
@@ -64,26 +65,53 @@ const Landing = ({
             </div>
 
             <div className="landing-info">
-                <div className="slogan">
-                    <p className="h0 ta-center linear-wipe">
-                        Design driven
-                    </p>
-                    <p className="h0 ta-center white">
-                        development
-                    </p>
-                    <p className="h0 ta-center linear-wipe">
-                        and more stuff
-                    </p>
-                    <p className="h0 ta-center white">
-                        about ITSA
-                    </p>
-                </div>
+                
+                <ScrollAnimation 
+                    animateIn="zoomIn"
+                    delay={200}
+                    duration={1.2}
+                    animateOnce
+                >
 
-                <p className="h4 blue" style={{fontWeight: 600}}>#ExploreToInspire</p>
+                    <div className="slogan">
+                        <p className="h0 ta-center linear-wipe">
+                            Design driven
+                        </p>
+                        <p className="h0 ta-center white">
+                            development
+                        </p>
+                        <p className="h0 ta-center linear-wipe">
+                            and more stuff
+                        </p>
+                        <p className="h0 ta-center white">
+                            about ITSA
+                        </p>
+                    </div>
 
-                <button className="know-more-button" onClick={goToAbout}>
-                    <p className="h5 white">Know More</p>
-                </button>
+                </ScrollAnimation>
+
+                <ScrollAnimation 
+                    animateIn="fadeInUp"
+                    delay={1000}
+                    duration={1.2}
+                    animateOnce
+                >
+                    <p className="h4 blue" style={{fontWeight: 600}}>#ExploreToInspire</p>
+                    
+                </ScrollAnimation>
+
+                <ScrollAnimation 
+                    animateIn="fadeIn"
+                    offset={0}
+                    delay={1500}
+                    animateOnce
+                >
+ 
+                    <button className="know-more-button" onClick={goToAbout}>
+                        <p className="h5 white">Know More</p>
+                    </button>
+
+                </ScrollAnimation>
                 
             </div>
 
