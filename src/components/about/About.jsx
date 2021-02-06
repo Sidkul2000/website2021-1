@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 import './about.css'
 import curve from '../../assets/curve.svg'
@@ -106,11 +107,21 @@ const About = ({
             <div className='curve-div'>
                 <img src={curve} className="curve"/>
             </div>
-
+                
             <div className="about-title">
-                <p className="h2 primary">What does ITSA do ?</p>
-                <p className="t0 mediumgrey">Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do  </p>
+                <ScrollAnimation 
+                        animateIn="fadeIn"
+                        offset={50}
+                        duration={1.2}
+                        delay={200}
+                        animateOnce
+                >
+                    <p className="h2 primary">What does ITSA do ?</p>
+                    <p className="t0 mediumgrey">Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do  </p>
+                </ScrollAnimation>
             </div>
+
+
 
             <div className="features-container">
 
@@ -123,12 +134,27 @@ const About = ({
             </div>
 
             <div className="itsa-def">
-                <div className="itsa-def-left">
-                    <p className="itsa-def-text h3">What is ITSA and what do we do ?</p>
-                </div>
+                    <div className="itsa-def-left">
+                        <ScrollAnimation 
+                            animateIn="fadeInUp"
+                            offset={70}
+                            delay={0}
+                            animateOnce
+                        >
+                            <p className="itsa-def-text h3">What is ITSA and what do we do ?</p>
+                        </ScrollAnimation>
+                    </div>
+                
                 <div className="itsa-def-right">
-                    <p className="itsa-desc-text t0 mediumgrey">Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, elifi aso su carla lu ef</p>
-                    <p className="itsa-desc-text t0 mediumgrey">Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do Lorem ipsum dolor sit amet consecutueur </p>
+                        <ScrollAnimation 
+                            animateIn="fadeInUp"
+                            offset={70}
+                            delay={400}
+                            animateOnce
+                        >
+                            <p className="itsa-desc-text t0 mediumgrey">Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, elifi aso su carla lu ef</p>
+                            <p className="itsa-desc-text t0 mediumgrey">Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do Lorem ipsum dolor sit amet consecutueur </p>
+                        </ScrollAnimation>
                 </div>
             </div>
 
@@ -140,6 +166,7 @@ const About = ({
                     
                     <p className="h0 ta-center primary recentworks-text">Recent Works</p>
                     
+
                     <div className="horizontal-translate-container" style={{ transform: `translateX(${translateX}px)` }} ref={objectRef}>
                         <div className="cards-container">
                         {
