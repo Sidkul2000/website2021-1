@@ -49,7 +49,7 @@ const AboutCard = ({
     index
 }) => {
 
-    const [isHovering, setIsHovering] = useState(false)
+    const [isHovering, setIsHovering] = useState(true)
 
     return (
 
