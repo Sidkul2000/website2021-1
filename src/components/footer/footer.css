@@ -1,3 +1,99 @@
 /* CSS for footer */
 
 @import '../../global.css';
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+    font-weight:normal;
+    background-color:#FFFFFF;
+    color:#1B1B1B;
+  }
+  
+  .footer-info{
+    display:flex;
+    justify-content: center;
+    
+  }
+  
+  .footer-info-left, .footer-info-center {
+    font-size: medium;
+    display: flex;
+    justify-content:space-around;
+    margin-top: 40px;
+    width: 30%;
+  }
+  
+  .footer-info-right{
+    font-size: medium;
+    display: flex;
+    justify-content:space-around;
+    margin-top: 20px;
+    width: 20%;
+  } 
+  
+  .footer-address   {
+    width: 20%;
+    margin-top: 60px;
+    text-align:center;  
+    font-size: x-large;
+  }
+
+  .contact{
+    width: 45%;
+    margin-top: 60px;
+    text-align:center;  
+    font-size: x-large;
+  }
+
+  .Social{
+    width: 40%;
+    margin-top: 80px;
+    text-align:center;  
+    font-size: x-large;
+  }
+  
+ .Email{
+    width: 70%;
+    justify-self:center;
+    margin-top: 45px;
+  }
+  
+  .address{
+    width: 50%;
+    justify-self:center;
+    margin-top: 45px;
+  }
+  
+  .Social-media{
+    width: 80%;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  
+  .link{
+    text-decoration:none;
+    color:#1B1B1B;
+    
+  }
+  
+  .footer-info-left:hover, .footer-info-center:hover, .footer-info-right:hover{
+    transform: scale(1.2);
+  }
+  
+  
+  .dark-mode{
+    background-color:#1a1a1a;
+    color :#FFFFFF;
+  }
+  
+  .link-dark{
+    color:#FFFFFF;
+  }
+  
+  
