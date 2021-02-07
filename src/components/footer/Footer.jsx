@@ -24,9 +24,9 @@ const Footer = () => {
              </a>
            </section>
            <section className="address">
-             <t1 >Pune Vidyarthi Grih College of Engineering and technology, Pune</t1>
+             <t1 >Pune Vidyarthi Griha's College Of Engineering and Technology, Pune</t1>
              <p></p>
-             <t1>44 Vidya Nagari, Shivdarshan, Parvati, Pune 411009 Maharashtra, India</t1>
+             <t1>44 Vidya Nagari, Shivdarshan, Parvati, Pune 411009, Maharashtra, India</t1>
            </section>
          </section>
 
@@ -55,7 +55,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/itsapvg/?originalSubdomain=in"
                 target="blank"
               >
-                <FaLinkedin/> <t2>Linkdin</t2> 
+                <FaLinkedin/> <t2>LinkedIn</t2> 
               </a>
               
               <br></br>
