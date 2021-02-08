@@ -2,6 +2,7 @@ import React from 'react'
 import { useTheme } from '../../context/ThemeContext'
 import './footer.css'
 import {FaGithub,FaFacebook,FaInstagram,FaLinkedin,FaMapMarkerAlt,FaPhoneAlt,FaExternalLinkAlt} from "react-icons/fa";
+import { ExternalLink, Link, Link2, Mail, Map, Phone } from 'react-feather';
 
 
 const Footer = () => {
@@ -20,34 +21,37 @@ const Footer = () => {
                 href="https://www.google.com/maps/place/PVG'S+COET/@18.4900336,73.8525488,15z/data=!4m5!3m4!1s0x0:0x12df641707ea878e!8m2!3d18.4900336!4d73.8525488"
                 target="blank"
              >
-               <p><FaMapMarkerAlt/></p>
+               <Map size={25} className="link-pad"/>
              </a>
            </section>
            <section className="address">
-             <t1 >Pune Vidyarthi Griha's College Of Engineering and Technology, Pune</t1>
-             <p></p>
-             <t1>44 Vidya Nagari, Shivdarshan, Parvati, Pune 411009, Maharashtra, India</t1>
+             <p className="t0" >Pune Vidyarthi Griha's College Of Engineering and Technology, Pune</p>
+             <br/>
+             <p className="t0">44 Vidya Nagari, Shivdarshan, Parvati, Pune 411009, Maharashtra, India</p>
            </section>
          </section>
 
          {/* middle contact section */}
           <section className="footer-info-center">
             <section className="contact">
-              <p><FaPhoneAlt/></p>
+              <p><Mail className="link-pad" size={25}/></p>
             </section>
             <section className="Email">
-              <h3>Contact us at :</h3>
-              <t1>itsapvgcoet@gmail.com</t1>
+              <h3 className="h4">Contact us at </h3>
+              <a href="mailto:itsapvg@gmail.com" className="t0" style={{textDecoration: 'none'}}>itsapvgcoet@gmail.com</a>
             </section>
           </section>
 
           {/* right social media section */}
           <section className="footer-info-right">
+            
             <section className="Social">
-                <p><FaExternalLinkAlt/></p>
+                <p><ExternalLink size={25} className="link-pad"/></p>
             </section>
+            
             <section className="Social-media">
-            <h3>Follow us on :</h3>
+            
+            <p className="h4">Follow us on </p>
 
             {/* Linkdin */}
             <a
@@ -55,7 +59,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/itsapvg/?originalSubdomain=in"
                 target="blank"
               >
-                <FaLinkedin/> <t2>LinkedIn</t2> 
+                <FaLinkedin/> <p className="t1">LinkedIn</p> 
               </a>
               
               <br></br>
@@ -66,18 +70,28 @@ const Footer = () => {
                 target="blank" 
                 className={theme==='dark'? "link link-dark": "link"}
               >
-                <FaInstagram/>  <t2>Instagram </t2>
+                <FaInstagram/>  <p className="t1">Instagram </p>
               </a>
 
               <br></br>
 
               {/* facebook */}
-              <a 
+              {/* <a 
                 className={theme==='dark'? "link link-dark": "link"}
                 href="https://www.facebook.com/itsapvg/"
                 target="blank"
               >
-                <FaFacebook/>  <t2>Facebook</t2>
+                <FaFacebook/>  <p className="t1">Facebook</p>
+              </a>
+
+              <br/> */}
+
+              <a 
+                className={theme==='dark'? "link link-dark": "link"}
+                href="https://www.github.com/ITSA-PVG/"
+                target="blank"
+              >
+                <FaGithub/>  <p className="t1">Github</p>
               </a>
 
               {/*
@@ -96,8 +110,8 @@ const Footer = () => {
             </section>
           </section>
        </section>
-       <hr className="footer-seperator"/>
      </section>
+     
      </div>
   )
 }
