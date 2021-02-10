@@ -4,6 +4,8 @@ import { teamLeadersInfo } from '../../info'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 import './teamleaders.css'
+import { useTheme } from '../../context/ThemeContext'
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 
 const TeamLeaders = ({
@@ -11,6 +13,7 @@ const TeamLeaders = ({
 }) => {
 
     const [activeIndex, setActiveIndex] = useState(0)
+    const {theme, } = useTheme()
 
     const increment = () => {
         if(activeIndex === 6) {
@@ -96,10 +99,12 @@ const TeamLeaders = ({
         }
     }
 
+    
+
     return (
         <div className="team-leaders-container section-container">
             
-            <p className="h0 primary ta-center">Our Team Leaders</p>
+            <p className="h1 primary ta-center">Our Team Leaders</p>
 
             
 
@@ -119,7 +124,7 @@ const TeamLeaders = ({
                                 style={{backgroundImage:`url(${item.image})`}}
                                 onClick={() => setActiveIndex(index)}
                             >
-                                <div className="hexagon"></div> 
+                                <div className={theme==='dark' ? "hexagon" : "hexagon lighthexagon"}></div> 
                             </div>
 
                         )
@@ -137,8 +142,20 @@ const TeamLeaders = ({
                     <p className="h2 primary name-leader ta-center">{teamLeadersInfo[activeIndex].title}</p>
 
                     <p className="h5 role-leader ta-center">{teamLeadersInfo[activeIndex].role}</p>
+                    
+                    <div className="socials-leaders">
+                    {Object.keys(teamLeadersInfo[activeIndex].social).map(s => {
+                        return (
+                            s === 'instagram' ? <a href={teamLeadersInfo[activeIndex].social.instagram} target="_blank"><FaInstagram size={20} className="primary"/></a> : 
+                            s === 'linkedin' ? <a href={teamLeadersInfo[activeIndex].social.linkedin} target="_blank"><FaLinkedin size={20} className="primary"/></a> : 
+                            s === 'facebook' ? <a href={teamLeadersInfo[activeIndex].social.facebook} target="_blank"><FaFacebook size={20} className="primary"/></a> : null 
+                        )
+                    })}
+                    </div>
 
                     <p className="t0 desc-leader ta-center">{teamLeadersInfo[activeIndex].description}</p>
+
+                    
                 </ScrollAnimation>
                 
                 <ScrollAnimation 
@@ -149,7 +166,7 @@ const TeamLeaders = ({
                 >
  
                     <button className="know-more-button join-itsa-button">
-                        <p className="h5 white">Join ITSA</p>
+                        <p className="h5 white">Join the team</p>
                     </button>
 
                 </ScrollAnimation>

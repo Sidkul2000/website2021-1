@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { BrowserRouter , Route , Switch } from 'react-router-dom'
+import { Scrollbars } from 'react-custom-scrollbars'
 
 import About from './components/about/About'
 import Activities from './components/activities/Activities'
@@ -11,8 +12,20 @@ import TeamLeaders from './components/TeamLeaders/TeamLeaders'
 
 import { ThemeProvider } from "./context/ThemeContext"
 
+import './global.css'
+
 const App = ({}) => {
     return (
+        // <Scrollbars 
+        //   style={{width:'100vw', height:'100vh', backgroundColor: 'transparent'}}
+        //   autoHide
+        //   autoHideDuration={1000}
+        //   autoHideTimeout={800}
+        //   renderThumbVertical={({ style, ...props }) =>
+        //   <div {...props} className="scrollbar" style={{ ...style}}/>
+        //   }
+          
+        // >
         <div>
             <ThemeProvider>
                 <BrowserRouter>
@@ -22,8 +35,8 @@ const App = ({}) => {
                            <Fragment>
                                <Landing {...props}/>
                                <About {...props}/>
-                               <Team {...props}/>
                                <TeamLeaders/>
+                               <Team {...props}/>
                                <Activities {...props}/>
                                <Footer {...props}/>
                                <Sidebar/>
@@ -34,6 +47,7 @@ const App = ({}) => {
                 </BrowserRouter>
             </ThemeProvider>
         </div>
+        // </Scrollbars>
     )
 }
 

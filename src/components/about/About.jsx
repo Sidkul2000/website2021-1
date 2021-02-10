@@ -180,13 +180,25 @@ const About = ({
                 </div>
             </div>
 
-            <div className="itsa-def">
+            <div className="itsa-def" style={{padding:'20px 10%'}}>
                 <div className="itsa-def-left">
-                    <p className="itsa-def-text h3">What is ITSA and what do we do ?</p>
+                    <p className="itsa-def-text h3">Our leaders and inspiration</p>
                 </div>
-                <div className="itsa-def-right">
-                    <p className="itsa-desc-text t0 mediumgrey">Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, elifi aso su carla lu ef</p>
-                    <p className="itsa-desc-text t0 mediumgrey">Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do Lorem ipsum dolor sit amet consecutueur </p>
+                <div className="itsa-def-right-inspiration">
+                    <div className="teacher-box">
+                        <div className="teacher-box-photo">
+
+                        </div>
+                        <p className="h4 primary">Prof. Shubhangi Deshpande</p>
+                        <p className="t0 mediumgrey">ITSA Coordinator</p>
+                    </div>
+                    <div className="teacher-box">
+                        <div className="teacher-box-photo">
+
+                        </div>
+                        <p className="h4 primary">Prof. Dr. Surendra Mahajan</p>
+                        <p className="t0 mediumgrey">HOD, IT Department</p>
+                    </div>
                 </div>
             </div>
             

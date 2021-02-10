@@ -278,3 +278,37 @@
     flex-shrink: 0;
     border-radius: 10px;
 }
+
+.teacher-box {
+    
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.teacher-box * {
+    margin-bottom: 20px;
+}
+
+.teacher-box-photo {
+    width: 150px;
+    height: 150px;
+    background-color: #ABABAB1a;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.itsa-def-right-inspiration {
+    width: 80%;
+    padding: 0 10%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+}
