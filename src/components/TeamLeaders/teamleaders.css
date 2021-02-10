@@ -1,0 +1,223 @@
+@import '../../global.css';
+
+.team-leaders-container {
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 20px;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+}
+
+.slider-container {
+    width: 100%;
+    margin-top: 20px;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.active-item {
+    width: 220px;
+    height: 220px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%); 
+    transition: .25s ease-in-out;
+}
+
+.l1 {
+    width: 135px;
+    height: 135px;
+    background-color: transparent;
+    position: absolute;
+    top: 100px;
+    left: 25%;
+    transform: translateX(-50%) rotate(-4deg);
+    transition: .5s ease-in-out;
+}
+
+.l2 {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    position: absolute;
+    top: 250px;
+    left: 10%;
+    transform: translateX(-50%) rotate(-4deg);
+    transition: .5s ease-in-out;
+}
+
+.l3 {
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    position: absolute;
+    top: 350px;
+    left: 10%;
+    transform: translateX(-50%) rotate(-4deg);
+    transition: .5s ease-in-out;
+}
+
+.r1 {
+    width: 135px;
+    height: 135px;
+    background-color: transparent;
+    position: absolute;
+    top: 100px;
+    right: 25%;
+    transform: translateX(50%) rotate(4deg);
+    transition: .5s ease-in-out;
+}
+
+.r2 {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    position: absolute;
+    top: 250px;
+    right: 10%;
+    transform: translateX(50%) rotate(4deg);
+    transition: .5s ease-in-out;
+}
+
+.r3 {
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    position: absolute;
+    top: 350px;
+    right: 10%;
+    transform: translateX(50%) rotate(-4deg);
+    transition: .5s ease-in-out;
+}
+
+
+.arrow {
+    position: absolute;
+    top: 100px;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: #ABABAB1a;
+}
+
+.left {
+    left: 50%;
+    transform: translateX(-200px);
+}
+
+.right {
+    right: 50%;
+    transform: translateX(200px);
+}
+
+
+.pentagon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: url('../../assets/polygon.svg') no-repeat; */
+    background-size: contain;  
+    overflow: hidden;
+}
+
+.hexagon img {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: -50%;
+}
+
+.div {
+    width: 100%;
+    height: 100%;
+    background-image: url(http://placekitten.com/g/200/300);
+    background-size: 100%;
+    -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.hexagon {
+    width: 101%;
+    height: 101%;
+    margin-left: -0.5%;
+    margin-top: -0.5%;
+    background-image: url('../../assets/pentagon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    
+}
+
+.hexagon.lighthexagon {
+    background-image: url('../../assets/pentagon-white.svg') !important;
+}
+
+.outer {
+    cursor: pointer;
+    background-size: contain;
+    border-radius: 40px;
+}
+
+
+.name-leader {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 250px;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.desc-leader {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    width: 40%;
+    color: var(--darkgrey);
+}
+
+.role-leader {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    width: 40%;
+    color: var(--mediumgrey);
+    letter-spacing: 0.9px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.join-itsa-button {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 25px;
+}
+
+.socials-leaders {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.socials-leaders * {
+    margin: 0 10px;
+    cursor: pointer;
+}

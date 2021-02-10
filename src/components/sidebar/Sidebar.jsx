@@ -34,7 +34,7 @@ const Sidebar = ({
     const handleThemeChange = () => theme === 'dark' ? setTheme('light') : setTheme('dark')
   
 
-    const pages = ['landing', 'about', 'team', 'activities']
+    const pages = ['landing', 'about', 'team-leaders', 'activities']
 
     // runs when we scroll, checks if div is in viewport
     const handleScroll = () => {

@@ -169,6 +169,15 @@ html,body {
     color: var(--mediumgrey);
 }
 
+.scrollbar {
+    opacity: 0.8;
+    border-radius: 10px;
+    width: 8px;
+    background: linear-gradient(var(--blue), var(--green));
+    height: 20vh;
+    margin-right: 30px;
+}
+
 
 @keyframes float {
     0% {
