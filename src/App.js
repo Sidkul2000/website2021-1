@@ -7,6 +7,7 @@ import Footer from './components/footer/Footer'
 import Landing from './components/landing/Landing'
 import Sidebar from './components/sidebar/Sidebar'
 import Team from './components/team/Team'
+import TeamLeaders from './components/TeamLeaders/TeamLeaders'
 
 import { ThemeProvider } from "./context/ThemeContext"
 
@@ -22,6 +23,7 @@ const App = ({}) => {
                                <Landing {...props}/>
                                <About {...props}/>
                                <Team {...props}/>
+                               <TeamLeaders/>
                                <Activities {...props}/>
                                <Footer {...props}/>
                                <Sidebar/>
