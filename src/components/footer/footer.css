@@ -5,11 +5,11 @@
 .footer{
     display: flex;
     flex-direction: row;
-    margin-bottom: 2px;
     font-weight:normal;
     background-color:#FFFFFF;
     color:#1B1B1B;
     padding: 30px 5%;
+    margin-top: 35px;
     padding-left: calc(5% + 100px);
   }
 
