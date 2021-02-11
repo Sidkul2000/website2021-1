@@ -59,7 +59,7 @@ const AboutCard = ({
             onMouseLeave={() => setIsHovering(true)}
         >
             <div className={isHovering ? "feature-image-container-hover":"feature-image-container"}>
-                <img src={sample}/>
+                <img src="https://picsum.photos/500/300"/>
             </div>
             <div className={isHovering ? "feature-info-hover":"feature-info"}>
                 <p className={`h4 ta-center feature-title-${index}`}>{title}</p>
@@ -189,14 +189,14 @@ const About = ({
                         <div className="teacher-box-photo">
 
                         </div>
-                        <p className="h4 primary">Prof. Shubhangi Deshpande</p>
+                        <p className="h4 primary">Prof. Mrs. S A Deshpande</p>
                         <p className="t0 mediumgrey">ITSA Coordinator</p>
                     </div>
                     <div className="teacher-box">
                         <div className="teacher-box-photo">
 
                         </div>
-                        <p className="h4 primary">Prof. Dr. Surendra Mahajan</p>
+                        <p className="h4 primary">Prof. Dr. S A Mahajan</p>
                         <p className="t0 mediumgrey">HOD, IT Department</p>
                     </div>
                 </div>

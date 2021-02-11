@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Box, Home, TrendingUp, Users, Moon, Sun, DivideCircle } from 'react-feather'
+import React, { Fragment, useEffect, useState } from 'react'
+import { Box, Home, TrendingUp, Users, Moon, Sun, DivideCircle, ArrowUp } from 'react-feather'
 import { useTheme } from '../../context/ThemeContext'
 import Toggle from 'react-toggle'
 import "react-toggle/style.css"
@@ -48,7 +48,11 @@ const Sidebar = ({
                 setActivePage(index)
             }
         })
+
+        console.log(window.scrollY)
     }
+
+    const toDisplayGoUp = () => window.scrollY > window.innerHeight
 
     // Scroll active section into view on menu item click
     const handleMenuClick = handleID => {
@@ -62,7 +66,11 @@ const Sidebar = ({
         window.addEventListener('scroll', handleScroll)
     }, [])
 
+    console.log(toDisplayGoUp())
+
     return (
+
+        <Fragment>
         <div className="sidebar-container">
         
             <div className="app-logo-container">
@@ -99,6 +107,15 @@ const Sidebar = ({
 
         
         </div>
+
+        {toDisplayGoUp() ? 
+            <div className="go-up" onClick={() => window.scroll({top:0, left:0, behavior:'smooth'})}>
+                <ArrowUp className="primary" size={20}/>
+            </div>
+            : null 
+        }
+
+        </Fragment>
     )
 }
 

@@ -114,3 +114,19 @@
 .toggle.react-toggle--checked .react-toggle-thumb {
 	border: none;
 }
+
+.go-up {
+    width: 40px;
+    height: 40px;
+    position: sticky;
+    bottom: 30px;
+    z-index: 99999;
+    left: calc(100vw - 70px);
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ABABAB1a;
+    cursor: pointer;
+}

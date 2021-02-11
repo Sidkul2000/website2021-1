@@ -178,6 +178,14 @@
     width: 100%;
     object-fit: fill;
     transition: 0.25s ease-in-out !important;
+    border-radius: 10px;
+}
+
+.feature-image-container img {
+    width: 100%;
+    object-fit: fill;
+    transition: 0.25s ease-in-out !important;
+    border-radius: 10px;
 }
 
 .feature-info {
