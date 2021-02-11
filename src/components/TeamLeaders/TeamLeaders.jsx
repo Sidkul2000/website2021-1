@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ArrowLeft, ArrowRight } from 'react-feather'
 import { teamLeadersInfo } from '../../info'
 import ScrollAnimation from 'react-animate-on-scroll'
