@@ -320,3 +320,95 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
+
+@media only screen and (max-width: 600px)  {
+    .curve-div {
+        visibility: hidden;
+    }
+    .about-title {
+        font-weight: 700;
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+        background-color: transparent;
+        position: absolute;
+        right: 0;
+        left: 0;
+    }
+    .features-container {
+        width: 100%;
+        background-color: transparent;
+        padding: 20px;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 160px;
+        justify-content: flex-start;
+    }
+    .feature {
+        width: 80%;
+        height: 400px;
+        border-radius: 10px;
+        background-color: #ABABAB1a;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 8px solid transparent;
+    }
+    .feature-1 {
+        margin-top: 30px;
+    }
+    .feature-2 {
+        margin-top: 30px;
+    }
+    .itsa-def {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .itsa-def-left {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        align-items: unset;
+    }
+    
+    .itsa-def-right {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: unset;
+        flex-direction: column;
+    }
+    .itsa-def-text {
+        text-align: center;
+        margin-bottom: 20px;
+        padding-left: 10px;
+    }
+    .itsa-desc-text {
+        text-align: center;
+        padding-left: 0;
+        width: 100%;
+        font-size: 14px;
+    }
+    .itsa-def-right-inspiration {
+        width: 100%;
+        padding: 20;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .teacher-box * {
+        margin-bottom: 5px;
+    }
+    .teacher-box {
+        margin-bottom: 20px;
+    }
+    
+}

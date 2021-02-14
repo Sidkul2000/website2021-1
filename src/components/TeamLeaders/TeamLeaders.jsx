@@ -106,10 +106,7 @@ const TeamLeaders = ({
             
             <p className="h1 primary ta-center">Our Team Leaders</p>
 
-            
-
-            {activeIndex}
-
+           
             <div className="slider-container">
 
                 <div onClick={decrement} className="left arrow"><ArrowLeft className="primary" /></div>

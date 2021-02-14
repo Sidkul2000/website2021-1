@@ -172,3 +172,16 @@
     font-weight: 400;
     letter-spacing: 0.5px;
 }
+
+
+@media only screen and (max-width: 600px)  {
+    .landing-container {
+        padding-left: 0;
+    }
+    .landing-info {
+        padding-bottom: 100px;
+    }
+    .know-more-button {
+        height: 40px;
+    }
+}

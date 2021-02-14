@@ -34,7 +34,7 @@ const Footer = () => {
          {/* middle contact section */}
           <section className="footer-info-center">
             <section className="contact">
-              <p><Mail className="link-pad" size={25}/></p>
+              <Mail className="link-pad" size={25}/>
             </section>
             <section className="Email">
               <h3 className="h4">Contact us at </h3>
@@ -46,7 +46,7 @@ const Footer = () => {
           <section className="footer-info-right">
             
             <section className="Social">
-                <p><ExternalLink size={25} className="link-pad"/></p>
+                <ExternalLink size={25} className="link-pad"/>
             </section>
             
             <section className="Social-media">
