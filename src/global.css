@@ -64,9 +64,9 @@ html,body {
 
 .h2 {
     font-family: Poppins;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 30px;
-    letter-spacing: -0.2px;
+    letter-spacing: 0.2px;
     margin: 0;
     padding: 0;
 }
@@ -113,8 +113,8 @@ html,body {
 .t1 {
     font-family: Raleway;
     font-weight: 500;
-    font-size: 13px;
-    letter-spacing: 0px;
+    font-size: 13.5px;
+    letter-spacing: 0.7px;
     margin: 0;
     padding: 0;
     line-height: 20px;
@@ -271,4 +271,17 @@ html,body {
     ::-webkit-scrollbar {
         width: 7px;
     }
+}
+
+.shinetext {
+    background: linear-gradient(to left,  var(--blue), 33%,  rgb(83, 27, 214), rgb(75, 116, 250));
+    background-size: 200% auto;
+    text-align: center;
+    color: red;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: shine 10s linear infinite;
+    animation: shine 5s linear infinite;
 }
