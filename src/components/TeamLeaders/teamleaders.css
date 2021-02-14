@@ -2,7 +2,7 @@
 
 .team-leaders-container {
     width: 100%;
-    padding-left: 50px;
+    padding-left: 100px;
     padding-top: 20px;
     height: 100vh;
     justify-content: center;
@@ -13,7 +13,7 @@
 
 .slider-container {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 40px;
     background-color: transparent;
     position: relative;
     display: flex;
@@ -237,7 +237,7 @@
     
     .slider-container {
         width: 100%;
-        margin-top: 0px;
+        margin-top: 40px;
         background-color: transparent;
         position: relative;
         display: flex;

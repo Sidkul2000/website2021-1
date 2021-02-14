@@ -104,7 +104,26 @@ const TeamLeaders = ({
     return (
         <div className="team-leaders-container section-container">
             
-            <p className="h1 primary ta-center">Our Team Leaders</p>
+            
+            <p className="h0 primary ta-center " style={{marginTop:100}}>Meet the team</p>
+
+            <p className="t0 mediumgrey ta-center " style={{width:'60%', margin:'20px auto'}}>Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do Lorem ipsum dolor sit amet consecutueur, El suo carla dolor esmi reme adipiscingtel lu garcia </p>
+            
+            <ScrollAnimation 
+                    animateIn="fadeIn"
+                    offset={0}
+                    delay={0}
+                    animateOnce
+                >
+ 
+                    <button className="know-more-button join-itsa-button">
+                        <p className="h5 white">Join the team</p>
+                    </button>
+
+            </ScrollAnimation>
+           
+
+            {/* <p className="h2 primary ta-center mediumgrey">Our Team Leaders</p> */}
 
            
             <div className="slider-container">
@@ -155,18 +174,9 @@ const TeamLeaders = ({
                     
                 </ScrollAnimation>
                 
-                <ScrollAnimation 
-                    animateIn="fadeIn"
-                    offset={0}
-                    delay={0}
-                    animateOnce
-                >
- 
-                    <button className="know-more-button join-itsa-button">
-                        <p className="h5 white">Join the team</p>
-                    </button>
+                 
+            
 
-                </ScrollAnimation>
 
             </div>
         </div>
