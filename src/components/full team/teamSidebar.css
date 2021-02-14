@@ -1,0 +1,179 @@
+/* CSS for sidebar */
+
+@import '../../global.css';
+
+.sidebar-container {
+    width: 100px;
+    height: 100vh;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-logo-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.menu-container {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50% 0 80% 0;
+}
+
+.menu-option {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    color: var(--lightgrey);
+}
+
+.active-menu {
+    color: var(--blue);
+}
+
+.menu-option:hover:not(.active-menu) {
+    color: var(--darkgrey);
+    transition: 0.25s ease-in-out;
+}
+
+.menu-icon {
+    width: 20px;
+    color: inherit;
+    height: 20px;
+}
+
+.react-toggle {
+    transform: rotate(-90deg);
+}
+.react-toggle-thumb {
+    width: 19px;
+    height: 19px;
+    top: 2.5px;
+    left: 2.5px;
+    border: none;
+}
+
+.toggle.react-toggle--focus .react-toggle-thumb {
+	box-shadow: none;
+}
+.chartToggle.react-toggle--focus .react-toggle-thumb {
+	box-shadow: none;
+}
+
+.toggle * {
+	box-shadow: none;
+}
+
+.toggle.react-toggle--checked .react-toggle-track {
+	background-color: #d3d3d3;
+}
+.chartToggle.react-toggle--checked .react-toggle-track {
+	background-color: var(--blue);
+}
+.toggle.react-toggle--checked .react-toggle-track:hover{
+	background-color: #d3d3d3;
+}
+
+.toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+	background-color: #d3d3d3;
+}
+
+.toggle.react--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+	background-color: #d3d3d3;
+}
+
+.toggle.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+	box-shadow: none;
+}
+
+.chartToggle.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+	box-shadow: none;
+}
+
+.toggle.react-toggle--checked .react-toggle-thumb {
+	border: none;
+}
+
+.go-up {
+    width: 40px;
+    height: 40px;
+    position: sticky;
+    bottom: 30px;
+    z-index: 99999;
+    left: calc(100vw - 70px);
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ABABAB1a;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px)  {
+    .sidebar-container {
+        width: 100%;
+        height: 60px;
+        bottom: 0;
+        left: 0;
+        top: unset;
+        background: var(--background);
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .app-logo-container {
+        width: 15%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+    }
+    
+    .menu-container {
+        height: 100%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: unset;
+    }
+    .go-up {
+        width: 40px;
+        height: 40px;
+        position: sticky;
+        bottom: 80px;
+        z-index: 99999;
+        left: calc(100vw - 20px);
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #ABABAB1a;
+        cursor: pointer;
+    }
+}

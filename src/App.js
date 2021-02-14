@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer'
 import Landing from './components/landing/Landing'
 import Sidebar from './components/sidebar/Sidebar'
 import Team from './components/team/Team'
+import Teams from './components/full team/Teams'
 import TeamLeaders from './components/TeamLeaders/TeamLeaders'
 
 import { ThemeProvider } from "./context/ThemeContext"
@@ -31,7 +32,7 @@ const App = ({}) => {
                 <BrowserRouter>
                     <Switch>
                        
-                       <Route path="/" render={props => 
+                       <Route path="/" exact render={props => 
                            <Fragment>
                                <Landing {...props}/>
                                <About {...props}/>
@@ -42,6 +43,22 @@ const App = ({}) => {
                                <Sidebar/>
                            </Fragment>
                        }/>
+
+                       <Route path="/teams" exact>
+                        <Teams />
+                       </Route>
+
+                       <Route path="*" render={props => 
+                        <Fragment>
+                            <Landing {...props}/>
+                            <About {...props}/>
+                            <TeamLeaders/>
+                            <Team {...props}/>
+                            <Activities {...props}/>
+                            <Footer {...props}/>
+                            <Sidebar/>
+                        </Fragment>
+                    }/>
 
                     </Switch>
                 </BrowserRouter>

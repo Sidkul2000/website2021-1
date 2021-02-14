@@ -1,0 +1,151 @@
+/* CSS for team page */
+
+@import '../../global.css';
+
+
+.team-container {
+	width: 100%;
+	padding: 50px;
+	/*padding-left: 50px;
+	padding-top: 50px;
+	height: 100vh;*/
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--background);
+	color:white;
+	margin-top: 0;
+	
+	
+}
+
+.team-header {
+	display: flex;
+	background-color: #ABABAB1a;
+	align-items: flex-start;
+	padding: 20px;
+	padding-left: 40px;
+	border-radius: 8px;
+	/* border-bottom: 8px solid; */
+	transition: 0.1s ease-in-out;
+	flex-wrap: wrap;
+	/* box-shadow: #0085FF -8px 8px  ; */
+}
+
+
+
+.team-header-left {
+	text-align: left;
+	width: 60%;
+	transition: 0.25s;
+}
+
+
+.team-head {
+	padding-left: 0px;
+}
+
+.team-head-data {
+	text-align: right; 
+	padding-left: 0px;
+}
+
+.member-box {
+    
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: flex-start;
+	padding-left: 30px;
+	padding-right: 30px;
+	transition: 0.15s ease-in-out;
+
+}
+
+.member-box:hover {
+	transform: scale(1.1);
+}
+
+.member-box * {
+	margin-bottom: 10px;
+	border-bottom: 1px;
+}
+
+.member-box-photo {
+	width: 130px;
+	height: 130px;
+	margin-top: 15px;
+	background-color: #ABABAB1a;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.member-container {
+	display: flex;
+	flex-direction: row;
+	
+	justify-content: left;
+	margin-left: 0px;
+	margin-top: 40px;
+	flex-wrap: wrap;
+	max-width: 1200px;
+}
+/* 
+.th0 {
+	border-color: var(--green);
+}
+
+.th1 {
+	border-color: var(--yellow);
+}
+
+.th2 {
+	border-color: #7E08D9;
+}
+
+.th3 {
+	border-color: var(--green);
+}
+
+.th4 {
+	border-color: #0068C8;
+} */
+
+
+.tt0 {
+	color: var(--blue);
+}
+
+.tt1 {
+	color: var(--yellow);
+}
+
+.tt2 {
+	color: #7E08D9;
+}
+
+.tt3 {
+	color: var(--green);
+}
+
+.tt4 {
+	color: #ea4335;
+}
+
+
+/* .linear-wipe {
+	text-align: center;
+	background: linear-gradient(to right, var(--blue), 40%, #000, var(--blue));
+	background-size: 200% auto;
+	color: red;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: shine 10s linear infinite;
+	animation: shine 5s linear infinite;
+} */
