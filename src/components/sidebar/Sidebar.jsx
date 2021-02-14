@@ -49,10 +49,9 @@ const Sidebar = ({
             }
         })
 
-        console.log(window.scrollY)
     }
 
-    const toDisplayGoUp = () => window.scrollY > window.innerHeight
+    const toDisplayGoUp = () => window.pageYOffset > window.innerHeight ? true : false
 
     // Scroll active section into view on menu item click
     const handleMenuClick = handleID => {
@@ -62,11 +61,12 @@ const Sidebar = ({
 
     }
 
+    console.log(toDisplayGoUp())
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
     }, [])
 
-    console.log(toDisplayGoUp())
 
     return (
 
@@ -90,7 +90,7 @@ const Sidebar = ({
                         )
                     })
                 }
-                {activePage}
+                
             </div>
 
             <div className="app-logo-container">

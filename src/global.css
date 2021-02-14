@@ -215,3 +215,57 @@ html,body {
       background-position: 200% center;
     }
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #02a4b9 , #008CCE, #0085FF, #1578FF, #2453FF, #4B44FF,#008CCE, #02a4b9);
+    border-radius: 10px;
+    background-blend-mode: saturation;
+    height: 10vh;
+}
+
+@media only screen and (max-width: 600px)  {
+    
+    body {
+        overflow-x: hidden;
+    }
+    .section-container {
+        padding-left: 0;
+    }
+    
+    .h0 {
+        font-size: 34px;
+        line-height: 50px;
+    }
+
+    .h1 {
+        font-size: 33px;
+        padding: 0 20px;
+    }
+
+    .h2 {
+        font-size: 23px;
+        line-height: 35px;
+    }
+
+    .h4 {
+        font-size: 15px;
+    }
+
+    .h5 {
+        font-size: 13px;
+    }
+
+    .t0 {
+        font-size: 13px;
+        letter-spacing: 1px;
+        line-height: 22px;
+    }
+}
