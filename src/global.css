@@ -268,4 +268,7 @@ html,body {
         letter-spacing: 1px;
         line-height: 22px;
     }
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
 }
