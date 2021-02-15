@@ -5,6 +5,9 @@ import './teams.css'
 import TeamMember from './TeamMember'
 import TeamSidebar from './TeamSidebar'
 import Footer from '../footer/Footer'
+import { teamLeadersInfo, teamsInfo } from '../../info'
+import { ArrowLeft } from 'react-feather'
+import { Link } from 'react-router-dom'
 
 const teamMembers = [
     {
@@ -49,203 +52,63 @@ const Teams = ({
     
     return (
         <div>
+
         <TeamSidebar />
 
-        <p className="h1 ta-center primary"  >Meet the Teams</p>
+        <div className="teams-outer">
 
-        <div className="section-container team-container " style={{paddingLeft: "100px"}}>
-            <div className="team-header" style={{boxShadow: "-8px 8px #0085FF"}} >
-                <div className="team-header-left ">
-                    <p className="h1 ta-center tt0 " style={{textAlign: "left"}}>Team Web and Tech</p>
-                    <p className="h4 primary">teamPurpose</p> 
-                </div>      
+        
+        {
+            teamsInfo.map((team, index) => {
 
-                <div className="team-header-right">
-                <div className="team-head" style={{display:"flex", flexWrap: "wrap"}} >
-                    
-                <p className="team-head-data">
-                    <p className="h4 primary tt0 ">Bhujang Shinde</p>
-                    <p className="h5 primary">Head of Team Web and Tech</p>
-                    
-                    <div  style={{display:'flex',justifyContent:"flex-end"}}>
-                        <a href="" target="_blank"><FaFacebook size={20} style={{margin: "5"}} className="primary"/></a>
-                        <a href="" target="_blank"><FaInstagram size={20}  style={{margin: "5"}} className="primary"/></a>
-                        <a href="" target="_blank"><FaLinkedin size={20}  style={{margin: "5"}} className="primary"/></a>
-                    </div>
-                        </p>
-                        <img src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" alt="Image" 
-                            style={{width: "150px",height: "150px", marginLeft: "50px", borderRadius: "50%"}}
-                        />
-                    </div>
-                </div>
-            
-            </div>
-
-            <div className="member-container">  
-                {teamMembers.map(member => {
-                    return <TeamMember name={member.name} year={member.year}/>
-                })}					
-            </div>
-        </div>
-
-
-        <div className="section-container team-container " style={{paddingLeft: "100px"}}>
-            <div className="team-header" style={{boxShadow: "-8px 8px #FFDB00"}} >
-                <div className="team-header-left ">
-                    <p className="h1 ta-center tt1 " style={{textAlign: "left"}}>Team Notification </p>
-                    <p className="h4 primary">teamPurpose </p> 
-                </div>      
-
-                <div className="team-header-right">
-                    <div className="team-head" style={{display:"flex", flexWrap: "wrap"}} >
+                const teamClass = `team-${team.teamName}`
+                return (
+                    <div className={`section-container team-full-container ${teamClass}`}>
                         
-                    <p className="team-head-data">
-                        <p className="h4 primary tt1 ">Pranashree Patil</p>
-                        <p className="h5 primary">Head of Team Notification</p>
+                        <Link to="/">
+                            <p className="t1 primary back-text"><ArrowLeft size={20} className="primary"/>back to teams</p>
+                        </Link>
+
+                        <div className="team-header">
+                    
+                            <div className="team-header-left ">
+                                <p className="h2 ta-left" style={{color: team.teamColor}}>{team.teamName}</p>
+                                <p className="t0 mediumgrey">{team.description}</p> 
+                            </div>      
+
+                            <div className="team-header-right">
+                            
+                                <div className="team-head">
+                                
+                                    <div className="team-head-data">
+                                        <p className="h4 primary"  style={{color: team.teamColor}}>{team.teamHead.teamHeadName}</p>
+                                        <p className="h5 mediumgrey">Head of {team.teamName}</p>
+                                    
+                                        <div className="team-head-social">
+                                            <a href="" target="_blank"><FaFacebook size={20} className="primary"/></a>
+                                            <a href="" target="_blank"><FaInstagram size={20} className="primary"/></a>
+                                            <a href="" target="_blank"><FaLinkedin size={20} className="primary"/></a>
+                                        </div>
+                                    </div>
+                                    
+                                    <img src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" alt="Image"/>
+
+                                </div>
+                            </div>
                         
-                        <div  style={{display:'flex',justifyContent:"flex-end"}}>
-                            <a href="" target="_blank"><FaFacebook size={20} style={{margin: "5"}} className="primary"/></a>
-                            <a href="" target="_blank"><FaInstagram size={20}  style={{margin: "5"}} className="primary"/></a>
-                            <a href="" target="_blank"><FaLinkedin size={20}  style={{margin: "5"}} className="primary"/></a>
                         </div>
-                    </p>
-                    <img src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" alt="Image" 
-                        style={{width: "150px",height: "150px", marginLeft: "50px", borderRadius: "50%"}}
-                    />
+
+                        <div className="member-container">  
+                            {team.teamMembers.map(member => {
+                                return <TeamMember name={member.teamMemberName} year={member.class} image={member.image} social={member.social}/>
+                            })}					
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div className="member-container">  
-                {teamMembers.map(member => {
-                    return <TeamMember name={member.name} year={member.year}/>
-                })}	
-            </div>
-            
+                )
+            })
+        }
         </div>
-
-        <div className="section-container team-container " style={{paddingLeft: "100px"}}>
-            <div className="team-header" style={{boxShadow: "-8px 8px #7E08D9"}} >
-                <div className="team-header-left ">
-                    <p className="h1 ta-center tt2 " style={{textAlign: "left"}}>Team Notification </p>
-                    <p className="h4 primary">teamPurpose</p> 
-                </div>      
-
-                <div className="team-header-right">
-                <div className="team-head" style={{display:"flex", flexWrap: "wrap"}} >
-                    
-                <p className="team-head-data">
-                    <p className="h4 primary tt2 ">Pranashree Patil</p>
-                    <p className="h5 primary">Head of Team Notification</p>
-                    
-                    <div  style={{display:'flex',justifyContent:"flex-end"}}>
-                        <a href="" target="_blank"><FaFacebook size={20} style={{margin: "5"}} className="primary"/></a>
-                        <a href="" target="_blank"><FaInstagram size={20}  style={{margin: "5"}} className="primary"/></a>
-                        <a href="" target="_blank"><FaLinkedin size={20}  style={{margin: "5"}} className="primary"/></a>
-                    </div>
-                        </p>
-                        <img src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" alt="Image" 
-                style={{width: "150px",height: "150px", marginLeft: "50px", borderRadius: "50%"}}
-                />
-                
-            </div>
-                </div>
-                
-
-            </div>
-
-            <div className="member-container">  
-                {teamMembers.map(member => {
-                    return <TeamMember name={member.name} year={member.year}/>
-                })}	
-                            
-            </div>
-                
-        </div>
-
-
-        <div className="section-container team-container " style={{paddingLeft: "100px"}}>
-            <div className="team-header" style={{boxShadow: "-8px 8px #02B93F"}} >
-                <div className="team-header-left ">
-                    <p className="h1 ta-center tt3 " style={{textAlign: "left"}}>Team Notification </p>
-                    <p className="h4 primary">teamPurpose</p> 
-                </div>      
-
-                <div className="team-header-right">
-                <div className="team-head" style={{display:"flex", flexWrap: "wrap"}} >
-                    
-                <p className="team-head-data">
-                    <p className="h4 primary tt3 ">Pranashree Patil</p>
-                    <p className="h5 primary">Head of Team Notification</p>
-                    
-                    <div  style={{display:'flex',justifyContent:"flex-end"}}>
-                        <a href="" target="_blank"><FaFacebook size={20} style={{margin: "5"}} className="primary"/></a>
-                        <a href="" target="_blank"><FaInstagram size={20}  style={{margin: "5"}} className="primary"/></a>
-                        <a href="" target="_blank"><FaLinkedin size={20}  style={{margin: "5"}} className="primary"/></a>
-                    </div>
-                        </p>
-                        <img src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" alt="Image" 
-                style={{width: "150px",height: "150px", marginLeft: "50px", borderRadius: "50%"}}
-                />
-                
-            </div>
-                </div>
-                
-
-            </div>
-
-            <div className="member-container">  
-                {teamMembers.map(member => {
-                    return <TeamMember name={member.name} year={member.year}/>
-                })}	
-                            
-            </div>
-
-                
-        </div>
-      
-
-        <div className="section-container team-container " style={{paddingLeft: "100px"}}>
-            <div className="team-header" style={{boxShadow: "-8px 8px #ea4335"}} >
-            <div className="team-header-left ">
-            <p className="h1 ta-center tt4 " style={{textAlign: "left"}}>Team Notification </p>
-            <p className="h4 primary" > teamPurpose </p> 
-            </div>      
-
-            <div className="team-header-right">
-            <div className="team-head" style={{display:"flex", flexWrap: "wrap"}} >
-
-            <p className="team-head-data">
-            <p className="h4 primary tt4 ">Pranashree Patil</p>
-            <p className="h5 primary">Head of Team Notification</p>
-
-            <div  style={{display:'flex',justifyContent:"flex-end"}}>
-                <a href="" target="_blank"><FaFacebook size={20} style={{margin: "5"}} className="primary"/></a>
-                <a href="" target="_blank"><FaInstagram size={20}  style={{margin: "5"}} className="primary"/></a>
-                <a href="" target="_blank"><FaLinkedin size={20}  style={{margin: "5"}} className="primary"/></a>
-            </div>
-                </p>
-                <img src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" alt="Image" 
-            style={{width: "150px",height: "150px", marginLeft: "50px", borderRadius: "50%"}}
-            />
-
-            </div>
-            </div>
-
-
-            </div>
-
-            <div className="member-container">  
-            {teamMembers.map(member => {
-            return <TeamMember name={member.name} year={member.year}/>
-            })}	
-                    
-            </div>
-
-
-        </div>
-
-
         <Footer />
         </div>
     )

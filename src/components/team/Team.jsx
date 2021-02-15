@@ -7,7 +7,7 @@ import printteam from '../../assets/print-team.svg'
 import notteam from '../../assets/not-team.svg'
 import finteam from '../../assets/fin-team.svg'
 import eventteam from '../../assets/event-team.svg'
-import { Bell, DollarSign, Film, Layers, Tool } from 'react-feather';
+import { Bell, Code, DollarSign, Film, Layers, Tool } from 'react-feather';
 import TeamLeaders from '../TeamLeaders/TeamLeaders'
 
 
@@ -34,7 +34,7 @@ const Team = ({
                     <div className="team-top">
                             <div className='team-box tb0'>
                                 <img src={techteam}/>
-                                <Tool className="primary team-icon"/>
+                                <Code className="primary team-icon"/>
                                 <p className='h4 primary'>Team Web and Tech</p>
                                 <p className='t1 mediumgrey ourteams-text'>Lorem ipsum dolor sit amet consecutueur regino psal sodam</p>
                                 <p className="h5 white view-button">View full team</p>

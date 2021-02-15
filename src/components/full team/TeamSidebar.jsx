@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import { Code, Home, Bell,DollarSign, Users, Moon, Sun, DivideCircle, ArrowUp } from 'react-feather'
+import { Code, Home, Bell,DollarSign, Users, Moon, Sun, DivideCircle, ArrowUp, Layers, Film } from 'react-feather'
 import { useTheme } from '../../context/ThemeContext'
 import Toggle from 'react-toggle'
 import "react-toggle/style.css"
@@ -9,19 +9,19 @@ import { isElementInViewport } from '../../utils'
 
 const menuList = [
     {
-        icon: <Code className="menu-icon"/>
+        icon: <Code className="menu-icon" color="#0085FF"/>
     },
     {
-        icon: <Code className="menu-icon"/>
+        icon: <Bell className="menu-icon" color="#FFDB00"/>
     },
     {
-        icon: <Bell className="menu-icon"/>
+        icon: <DollarSign className="menu-icon" color="#7E08DA"/>
     },
     {
-        icon: <Users className="menu-icon"/>
+        icon: <Layers className="menu-icon" color="#02B93F"/>
     },
     {
-        icon: <DollarSign className="menu-icon"/>
+        icon: <Film className="menu-icon" color="#0085FF"/>
     },
 ]
 
@@ -37,14 +37,14 @@ const Sidebar = ({
     const handleThemeChange = () => theme === 'dark' ? setTheme('light') : setTheme('dark')
   
 
-    const pages = ['landing', 'about', 'team-leaders', 'activities']
+    const pages = ['Team Web and Tech', 'Notification', 'Finance', 'Event Management and Production', 'Student Coordination and Printing']
 
     // runs when we scroll, checks if div is in viewport
     const handleScroll = () => {
        
         pages.forEach((page, index) => {
         
-            let pageClass = `${page}-container`
+            let pageClass = `team-${page}`
             let element = document.querySelector(`.${pageClass}`)
             
             if(isElementInViewport(element)) {
@@ -59,9 +59,12 @@ const Sidebar = ({
     // Scroll active section into view on menu item click
     const handleMenuClick = handleID => {
         
-        let activeSection = document.querySelector(`.${pages[handleID]}-container`) 
-        activeSection.scrollIntoView({behavior: 'smooth'})
-
+       const howMuchToScroll = handleID * window.innerHeight
+       window.scroll({
+           top: howMuchToScroll,
+           left:0,
+           behavior:'smooth'
+       })
     }
 
     console.log(toDisplayGoUp())
@@ -110,14 +113,6 @@ const Sidebar = ({
 
         
         </div>
-
-        {toDisplayGoUp() ? 
-            <div className="go-up" onClick={() => window.scroll({top:0, left:0, behavior:'smooth'})}>
-                <ArrowUp className="primary" size={20}/>
-            </div>
-            : null 
-        }
-
         </Fragment>
     )
 }
