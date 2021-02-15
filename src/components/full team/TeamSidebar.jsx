@@ -77,7 +77,7 @@ const Sidebar = ({
     return (
 
         <Fragment>
-        <div className="sidebar-container">
+        <div className="sidebar-container team-sidebar">
         
             <div className="app-logo-container">
 

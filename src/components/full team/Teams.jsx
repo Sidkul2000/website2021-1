@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 import './teams.css'
@@ -49,6 +49,10 @@ const teamMembers = [
 const Teams = ({
     props
 }) => {
+
+    useEffect(() => {
+        window.scroll({top:0, left:0, behavior:'auto'})
+    }, [])
     
     return (
         <div>
@@ -66,13 +70,13 @@ const Teams = ({
                     <div className={`section-container team-full-container ${teamClass}`}>
                         
                         <Link to="/">
-                            <p className="t1 primary back-text"><ArrowLeft size={20} className="primary"/>back to teams</p>
+                            <p className={`t1 primary back-text ${index === 0? '' : 'no-display'}`}><ArrowLeft size={20} className="primary"/>back to teams</p>
                         </Link>
 
                         <div className="team-header">
                     
                             <div className="team-header-left ">
-                                <p className="h2 ta-left" style={{color: team.teamColor}}>{team.teamName}</p>
+                                <p className="h2" style={{color: team.teamColor}}>{team.teamName}</p>
                                 <p className="t0 mediumgrey">{team.description}</p> 
                             </div>      
 

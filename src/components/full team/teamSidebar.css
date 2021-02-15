@@ -176,4 +176,7 @@
         background-color: #ABABAB1a;
         cursor: pointer;
     }
+    .team-sidebar {
+		display: none;
+	}
 }

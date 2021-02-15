@@ -9,7 +9,7 @@ const TeamMember = ({
 }) => {
     
     return (
-		<div className="">   
+		
 	        
             <div className="member-box">
                 
@@ -23,14 +23,19 @@ const TeamMember = ({
 						<a href="" target="_blank"><FaLinkedin size={20} className="primary"/></a>
 					</div>
                 </div>
-                
-				<p className="h4 primary">{name}</p>
 
-				<p className="t0 mediumgrey">{year}</p>
+				<div className="change-align">
+
+					<p className="h4 primary">{name}</p>
+
+					<p className="t0 mediumgrey">{year}</p>
+				
+				</div>
+                
 				
 				
 			</div>  
-        </div>
+       
     )
 }
 
