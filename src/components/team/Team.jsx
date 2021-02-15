@@ -9,6 +9,7 @@ import finteam from '../../assets/fin-team.svg'
 import eventteam from '../../assets/event-team.svg'
 import { Bell, Code, DollarSign, Film, Layers, Tool } from 'react-feather';
 import TeamLeaders from '../TeamLeaders/TeamLeaders'
+import { Link } from 'react-router-dom'
 
 
 const Team = ({
@@ -31,6 +32,7 @@ const Team = ({
                         animateOnce
                     >
                     
+                    <Link to="/teams">
                     <div className="team-top">
                             <div className='team-box tb0'>
                                 <img src={techteam}/>
@@ -74,6 +76,7 @@ const Team = ({
                                 <p className="h5 white view-button">View full team</p>
                             </div>
                     </div>
+                    </Link>
                     </ScrollAnimation>
                 
             </div>

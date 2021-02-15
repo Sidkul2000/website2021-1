@@ -171,6 +171,9 @@
 	width: auto;
 	height: 20px;
 }
+.change-align {
+	text-align: center;
+}
 /* 
 .th0 {
 	border-color: var(--green);
@@ -213,15 +216,117 @@
 	color: #ea4335;
 }
 
+@media only screen and (max-width: 600px) {
+	.team-full-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: var(--background);
+		color:white;
+		margin-top: 0;
+		padding-left: 0px;
+		overflow: hidden;
+		height: auto;
+		padding: 0 15px;
+	}
+	
+	.team-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: unset;
+		padding: 20px 10px 0 10px;
+		border-radius: 8px;
+		transition: 0.25s ease-in-out;
+	}
+	.team-header-left {
+		text-align: center;
+		max-width: 100%;
+		transition: 0.25s;
+	}
 
-/* .linear-wipe {
-	text-align: center;
-	background: linear-gradient(to right, var(--blue), 40%, #000, var(--blue));
-	background-size: 200% auto;
-	color: red;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-animation: shine 10s linear infinite;
-	animation: shine 5s linear infinite;
-} */
+	.team-header-left * {
+		margin-bottom: 15px;
+	}
+	
+	.team-header-right {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.team-head {
+		padding-left: 0px;
+		display: flex;
+		margin-top: 30px;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: unset;
+	}
+
+	.team-head * {
+		margin-left: 0;
+	}
+	.team-head-data {
+		text-align: center; 
+		padding-left: 0px;
+	}
+	
+	.team-head-data * {
+		margin: 7px 0;
+	}
+	
+	.team-head-social {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+	}
+	
+	.team-head-social * {
+		margin: 5px 0px;
+	}
+
+	.member-container {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		row-gap: 20px;
+		column-gap: 0px;
+		margin-top: 10px;
+	}
+	.member-box {
+		background-color: transparent;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-align: center;
+		justify-content: flex-start;
+		padding: 0 15px;
+		transition: 0.2s ease-in-out;
+		cursor: pointer;
+		margin-bottom: 8px;
+	}
+	.member-box-photo {
+		width: 50px;
+		height: 50px;
+		background-color: #ABABAB1a;
+		border-radius: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		transition: 0.23s ease;
+		position: relative;
+		margin-right: 20px;
+		margin-top: 0;
+	}
+	.member-box * {
+		margin-bottom: 0;
+	}
+	.change-align {
+		text-align: left;
+	}
+	.no-display {
+		display: none;
+	}
+	
+}
