@@ -4,13 +4,23 @@
 
 .activities-container{
   width: 100%;
-  background-color: var(--background);
+  background-color: transparent;
 }
 
+.card-conatiner{
+  height: 600px;
+}
 .table{
   width: 100%;
   table-layout: fixed;
   display: block;
+  padding: 50px;
+  text-align:left;
+  background-color: transparent;
+}
+
+.image-class{
+  border-radius: 20%;
 }
 
 .table h1{
