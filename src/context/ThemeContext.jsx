@@ -3,7 +3,7 @@ import React, { useEffect, useState, useContext, createContext } from 'react'
 const themeColors = {
     light : {
         background : '#FFFFFF',
-        primary : '#1B1B1B'
+        primary : '#333333'
     },
     dark : {
         background : '#1a1a1a',

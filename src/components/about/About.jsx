@@ -149,7 +149,7 @@ const About = ({
                         <ScrollAnimation 
                             animateIn="fadeInUp"
                             offset={70}
-                            delay={400}
+                            delay={100}
                             animateOnce
                         >
                             <p className="itsa-desc-text t0 mediumgrey">Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, elifi aso su carla lu ef</p>
