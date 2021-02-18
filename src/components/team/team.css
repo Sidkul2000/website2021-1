@@ -123,20 +123,27 @@
 
 .view-button {
     opacity: 0;
-    visibility: hidden;
+    display: none;
     text-transform: uppercase;
     font-size: 13px;
-    letter-spacing: 0.7px;
+    letter-spacing: 1px;
+    animation: opacity 1.4s;
+}
+
+@keyframes opacity {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 .team-box:hover .view-button {
-    transition: opacity 0.50s ease-in;
     opacity: 1;
-    visibility: visible;
-    position: absolute;
+    display: flex;
+    position: absolute; 
     bottom: -30px;
+    margin-top: 30px;
     left: 50%;
     transform: translateX(-50%);
+    animation: opacity 1.4s;
 }
 
 .team-box:hover .team-icon {

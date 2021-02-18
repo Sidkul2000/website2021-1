@@ -104,7 +104,7 @@ const Teams = ({
 
                         <div className="member-container">  
                             {team.teamMembers.map(member => {
-                                return <TeamMember name={member.teamMemberName} year={member.class} image={member.image} social={member.social}/>
+                                return <TeamMember firstName={member.firstName} lastName={member.lastName} className={member.class} profilePicture={member.profilePicture} instagramHandle={member.instagramHandle} githubHandle={member.githubHandle} linkedinHandle={member.linkedinHandle}/>
                             })}					
                         </div>
                     </div>

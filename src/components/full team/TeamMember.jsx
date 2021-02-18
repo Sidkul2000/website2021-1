@@ -1,11 +1,16 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 import './teams.css'
 
 const TeamMember = ({
-    name,
-	year
+    firstName,
+	lastName,
+	className,
+	instagramHandle = '',
+	linkedinHandle = '',
+	githubHandle = '',
+	profilePicture
 }) => {
     
     return (
@@ -15,20 +20,20 @@ const TeamMember = ({
                 
 				<div className="member-box-photo">
 					
-					<img src="https://picsum.photos/200"/>
+					<img src={profilePicture}/>
 					
 					<div className="team-member-social">
-						<a href="" target="_blank"><FaFacebook size={20} className="primary"/></a>
-						<a href="" target="_blank"><FaInstagram size={20} className="primary"/></a>
-						<a href="" target="_blank"><FaLinkedin size={20} className="primary"/></a>
+						<a href={githubHandle} target="_blank"><FaGithub size={20} className="primary"/></a>
+						<a href={instagramHandle} target="_blank"><FaInstagram size={20} className="primary"/></a>
+						<a href={linkedinHandle} target="_blank"><FaLinkedin size={20} className="primary"/></a>
 					</div>
                 </div>
 
 				<div className="change-align">
 
-					<p className="h4 primary">{name}</p>
+					<p className="h4 primary">{firstName} {lastName}</p>
 
-					<p className="t0 mediumgrey">{year}</p>
+					<p className="t0 mediumgrey">{className}</p>
 				
 				</div>
                 

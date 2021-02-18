@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ArrowLeft, ArrowRight } from 'react-feather'
+import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from 'react-feather'
 import { teamLeadersInfo } from '../../info'
 import ScrollAnimation from 'react-animate-on-scroll'
 
@@ -128,8 +128,8 @@ const TeamLeaders = ({
            
             <div className="slider-container">
 
-                <div onClick={decrement} className="left arrow"><ArrowLeft className="primary" /></div>
-                <div onClick={increment} className="right arrow"><ArrowRight className="primary" /></div>
+                <div onClick={decrement} className="left arrow"><ChevronLeft className="primary" /></div>
+                <div onClick={increment} className="right arrow"><ChevronRight className="primary" /></div>
 
 
                 {

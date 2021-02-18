@@ -173,6 +173,10 @@
     letter-spacing: 0.5px;
 }
 
+.mobile-logo {
+    display: none;
+}
+
 
 @media only screen and (max-width: 600px)  {
     .landing-container {
@@ -208,5 +212,13 @@
     }
     .parallax-grey-small {
         width: 5%;
+    }
+    .mobile-logo {
+        display: block;
+        width: 50%;
+    }
+    .mobile-logo img {
+        object-fit: cover;
+        width: 100%;
     }
 }

@@ -6,6 +6,8 @@ import "react-toggle/style.css"
 
 import './sidebar.css'
 import { isElementInViewport } from '../../utils'
+import ITSALogo from '../../assets/logo.png'
+import { Link } from 'react-router-dom'
 
 const menuList = [
     {
@@ -73,9 +75,11 @@ const Sidebar = ({
         <Fragment>
         <div className="sidebar-container">
         
-            <div className="app-logo-container">
-
+            <Link to="/">
+            <div className="app-logo-container">  
+                <img src={ITSALogo}/>   
             </div>
+            </Link>
 
             <div className="menu-container">
                 {

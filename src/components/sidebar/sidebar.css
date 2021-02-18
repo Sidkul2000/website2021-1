@@ -25,6 +25,12 @@
     background-color: transparent;
 }
 
+.app-logo-container img {
+    width: 65%;
+    filter: contrast(1.2) saturate(1.1);
+    object-fit: cover;
+}
+
 .menu-container {
     width: 100%;
     flex-grow: 1;
@@ -175,5 +181,11 @@
         justify-content: center;
         background-color: #ABABAB1a;
         cursor: pointer;
+    }
+    .react-toggle {
+        transform: rotate(180deg) scale(0.8) !important;
+    }
+    .app-logo-container:first-child {
+        display: none;
     }
 }
