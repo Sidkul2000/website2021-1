@@ -49,6 +49,8 @@ const Card = ({
   image3,
   index
 }) => {
+
+    description = description.length > 300 ? description.slice(0,300).concat('...') : description
     return(
       <div className="card-container">
          
@@ -59,9 +61,9 @@ const Card = ({
               <p className="h2 primary ta-left title">{title}</p>
               <p className="h5 mediumgrey contentcss date">{date}</p>
               <p className="t0 mediumgrey contentcss">{description}</p>
-              <button className="know-more-button join-itsa-button"  style={{marginLeft:0, transform: 'none', marginTop: 10}}>
+              {/* <button className="know-more-button"  style={{marginLeft:0, transform: 'none', marginTop: 10}}>
                 <p className="h5 white">Know more</p>
-              </button>
+              </button> */}
             </div>
             
             <div className="carousel-right">
@@ -105,6 +107,12 @@ const Activities = ({
             showStatus={false}
             showThumbs
             showArrows
+            autoPlay
+            infiniteLoop
+            swipeable
+            transitionTime={200}
+            interval={10000}
+            emulateTouch
           >
 
             {activitiesInfo.map((item, index) => { 

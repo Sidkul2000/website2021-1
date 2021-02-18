@@ -7,7 +7,7 @@ import parallaxgreen from '../../assets/parallax-green.svg'
 import parallaxyellow from '../../assets/parallax-yellow.svg'
 import parallaxblue from '../../assets/parallax-blue.svg'
 import parallaxgrey from '../../assets/parallax-grey.svg'
-import useRainbow from '../../hooks/useGradient'
+import ITSALogo from '../../assets/logo.png'
 
 const Landing = ({
     props
@@ -65,6 +65,8 @@ const Landing = ({
             </div>
 
             <div className="landing-info">
+
+                <img src={ITSALogo} className="mobile-logo"/>
                 
                 <ScrollAnimation 
                     animateIn="zoomIn"
@@ -75,16 +77,16 @@ const Landing = ({
 
                     <div className="slogan">
                         <p className="h0 ta-center linear-wipe">
-                            Design driven
+                            Information
                         </p>
                         <p className="h0 ta-center white">
-                            development
+                            Technology
                         </p>
                         <p className="h0 ta-center linear-wipe">
-                            and more stuff
+                            Students
                         </p>
                         <p className="h0 ta-center white">
-                            about ITSA
+                            Association
                         </p>
                     </div>
 

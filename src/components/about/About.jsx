@@ -182,20 +182,16 @@ const About = ({
 
             <div className="itsa-def" style={{padding:'20px 10%'}}>
                 <div className="itsa-def-left">
-                    <p className="itsa-def-text h3">Our leaders and inspiration</p>
+                    <p className="itsa-def-text h3">Our leaders & inspiration</p>
                 </div>
                 <div className="itsa-def-right-inspiration">
                     <div className="teacher-box">
-                        <div className="teacher-box-photo">
-
-                        </div>
+                        
                         <p className="h4 primary">Prof. Mrs. S A Deshpande</p>
                         <p className="t0 mediumgrey">ITSA Coordinator</p>
                     </div>
                     <div className="teacher-box">
-                        <div className="teacher-box-photo">
-
-                        </div>
+                        
                         <p className="h4 primary">Prof. Dr. S A Mahajan</p>
                         <p className="t0 mediumgrey">HOD, IT Department</p>
                     </div>
