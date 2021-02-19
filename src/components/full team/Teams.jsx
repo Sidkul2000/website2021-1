@@ -80,7 +80,7 @@ const Teams = ({
                                 <p className="t0 mediumgrey">{team.description}</p> 
                             </div>      
 
-                            <div className="team-header-right">
+                            {/* <div className="team-header-right">
                             
                                 <div className="team-head">
                                 
@@ -98,7 +98,7 @@ const Teams = ({
                                     <img src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" alt="Image"/>
 
                                 </div>
-                            </div>
+                            </div> */}
                         
                         </div>
 

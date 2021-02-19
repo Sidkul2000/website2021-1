@@ -12,6 +12,7 @@ const TeamMember = ({
 	githubHandle = '',
 	profilePicture
 }) => {
+
     
     return (
 		
@@ -20,12 +21,12 @@ const TeamMember = ({
                 
 				<div className="member-box-photo">
 					
-					<img src={profilePicture}/>
+					<img src={profilePicture.replace('open?', 'uc?')}/>
 					
 					<div className="team-member-social">
-						<a href={githubHandle} target="_blank"><FaGithub size={20} className="primary"/></a>
-						<a href={instagramHandle} target="_blank"><FaInstagram size={20} className="primary"/></a>
-						<a href={linkedinHandle} target="_blank"><FaLinkedin size={20} className="primary"/></a>
+						<a href={githubHandle} target="_blank"><FaGithub size={20} className="white"/></a>
+						<a href={instagramHandle} target="_blank"><FaInstagram size={20} className="white"/></a>
+						<a href={linkedinHandle} target="_blank"><FaLinkedin size={20} className="white"/></a>
 					</div>
                 </div>
 

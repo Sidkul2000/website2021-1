@@ -8,15 +8,15 @@ import sample from '../../assets/sample.png'
 const aboutInfo = [
     {
         title:'Gaming Events',
-        description:' Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do',
+        description:"Kurukshetra is ITSA's gaming event where students show off their gaming skills & win exciting prizes",
     },
     {
         title:'Webinars',
-        description:' Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do',
+        description:'ITSA conducts various webinars throughout the year to boost student knowledge',
     },
     {
         title:'Academic Workshops',
-        description:' Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do',
+        description:'Workshops on various technical and non technical topics are conducted by ITSA committee every year',
     },
 ]
 
