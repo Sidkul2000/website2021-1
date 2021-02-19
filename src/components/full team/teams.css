@@ -44,7 +44,7 @@
 
 .team-header-left {
 	text-align: left;
-	max-width: 60%;
+	max-width: 100%;
 	transition: 0.25s;
 }
 
@@ -134,7 +134,7 @@
 }
 
 .member-box-photo img {
-	object-fit: fill;
+	object-fit: cover;
 	width: 100%;
 	height: 100%;
 	transition: 0.25s ease;
