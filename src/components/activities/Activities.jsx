@@ -1,41 +1,81 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import Modal from 'react-modal'
 
 import './activities.css'
-import { ArrowLeft } from 'react-feather';
+import { ArrowLeft, X } from 'react-feather';
+import { importAll } from '../../utils';
+
+const customStyles = {
+  content: {
+    position: 'absolute',
+    top: '8%',
+    left: '13%',
+    right: '13%',
+    bottom: '8%',
+    overflow: 'auto',
+    WebkitOverflowScrolling: 'touch',
+    borderRadius: '10px',
+    background:'black',
+    outline: 'none',
+    width: '74%',
+    padding: '25px',
+    alignSelf: 'center',
+    height: 'auto',
+    paddingTop: '30px'
+    },
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: '#000000aa',
+    zIndex: 9999
+  },
+}
+
+Modal.setAppElement(document.querySelector('#root'))
 
 
 const activitiesInfo = [
     {
         key : '01',
         id : '01',
-        title:'Event name or slogan',
-        date:'26 January 2021',
-        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-        image1: 'https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png',
-        image2: 'https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png',
-        image3: 'https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png',
+        title:'Alumni Connect',
+        date:'28 November 2020',
+        venue: 'Virtual',
+        description:'ITSA arranged an Alumni Connect event on 28 th November. The speaker for this even was Akshay Kokane. He is a java developer at onetrust in Atlanta,GA . The basic idea to arrange this event was to give students more idea about Cloud Computing technology which is widely used in industry currently. The event was held virtually through Google meet platform and the whole session lasted for 2 hrs from 9:30 am to 11.40am. The students participated in the event were from second year and Third Year from all the departments of our college. From basic concepts like Saas,Iaas to hands-on experience were included in the event. Through interactive learning session, students were able to correlate the things and could clear all the doubts related to topics like higher education, currently growing new technologies in the industry etc.',
+        speakers:[
+          {
+            name:'Akshay Kokane',
+            occupation:'Java Developer',
+            image:'https://akshaykokane.com/assets/images/myphoto.jpg',
+          }
+        ],
+        images : importAll(require.context('../../assets/activities/alumni-connect', false, /\.(jpeg|jpg|JPG|PNG|png)$/ )) 
     },
     {
         key : '02',
         id : '02',
-        title:'Event name or slogan or activity name',
-        date:'12 January 2021',
-        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-        image1: 'https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png',
-        image2: 'https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png',
-        image3: 'https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png',
-    },
-    {
-        key : '03',
-        id : '03',
-        title:'Event name or slogan or activity name',
-        date:'13 January 2021',
-        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-        image1: 'https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png',
-        image2: 'https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png',
-        image3: 'https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png',
+        title:'Wordpress Workshop',
+        date:'10 November 2020',
+        venue:'Virtual',
+        speakers:[
+          {
+            name:'Shreya Mahajan',
+            occupation:'Student',
+            image:'https://drive.google.com/uc?id=14qmX7EaRT9R7OCQh2Rqs2HaH987NWVFC',
+          },
+          {
+            name:'Sakshi Chidrewar',
+            occupation:'Student',
+            image:'https://drive.google.com/uc?id=1JcQvatFh_zE-0ORsSBni7WmhnFQApnMt',
+          }
+        ],
+        description:'Designing a WordPress website is a part of academics. So ITSA arranged a workshop on 10 th November to make students aware about WordPress platform. The training was held from home on an online platform from 1:00-2.30 PM for 1.5 hours. The workshop was conducted by Shreya Mahajan and Sakshi Chidrewar from BE IT. Students from Third Year and Second Year of Information Technology department participated in the workshop. From basic concepts to publishing their own website, all parts were included. Through interactive learning, students were able to publish a website.',
+        images : importAll(require.context('../../assets/activities/wordpress-workshop', false, /\.(jpeg|jpg|JPG|png|PNG)$/ )) 
     },
 ]
 
@@ -44,22 +84,58 @@ const Card = ({
   title, 
   description,
   date,
-  image1,
-  image2,
-  image3,
-  index
+  venue,
+  index,
+  images,
+  speakers
 }) => {
 
-    description = description.length > 300 ? description.slice(0,300).concat('...') : description
+    let imageArray = Object.values(images).map(img => img.default)
+    description = description.length > 400 ? description.slice(0,400).concat('...') : description
+    
+    const modalSlides = imageArray.map(image => {
+      return {
+        media : image
+      }
+    })
+
+    const [isOpen, setOpen] = useState(false)
+
+    const openModal = () => setOpen(true)
+    const closeModal = () => setOpen(false)
+
     return(
       <div className="card-container">
          
           <div class="table">
           
             <div className="carousel-left left-side">
+              
               <p className="h0 mediumgrey number">{`0${index}`}</p>
               <p className="h2 primary ta-left title">{title}</p>
-              <p className="h5 mediumgrey contentcss date">{date}</p>
+              
+              <div className="horizontal">
+                <p className="h5 mediumgrey date">{date}</p>
+                <div className="dot"></div>
+                <p className="t2 mediumgrey contentcss" style={{textTransform:'uppercase'}}>{venue}</p>
+              </div>
+              <p className="t1 mediumgrey" style={{letterSpacing: 0.6}}>CONDUCTED BY</p>
+              <div className="speakers-container">
+                {speakers.map(speaker => {
+                  return (
+                    <div className="speaker">
+                      <div className="speaker-photo">
+                        <img src={speaker.image}/>
+                      </div>
+                      <div className="speaker-info">
+                        <p className="t1 primary">{speaker.name}</p>
+                        <p className="t1 mediumgrey">{speaker.occupation}</p>
+                      </div>
+                    </div>
+                  )
+                })}
+                
+              </div>
               <p className="t0 mediumgrey contentcss">{description}</p>
               {/* <button className="know-more-button"  style={{marginLeft:0, transform: 'none', marginTop: 10}}>
                 <p className="h5 white">Know more</p>
@@ -69,24 +145,59 @@ const Card = ({
             <div className="carousel-right">
             
               <div className="main-image">
-                <img className="image-class" src={image1} alt=""/>
+                <img className="image-class" alt="" src={imageArray[0]}/>
               </div>
             
               <div className="other-images">
                 
                 <div className="other-image">
-                  <img className="image-class" src={image2} alt=""/>
+                  <img className="image-class" alt="" src={imageArray[1]}/>
                 </div>
 
-                <div className="other-image plus-more">
-                  <img className="image-class" src={image3} alt=""/>
-                  <p className="h5 primary">+ 3 more</p>
+                <div className="other-image plus-more" onClick={openModal}>
+                  <img className="image-class" alt="" src={imageArray[2]}/>
+                  <p className="h5 primary">+ {imageArray.length - 2} more</p>
                 </div>
                 
               </div>
             </div>
 
         </div>
+
+        <Modal
+          isOpen={isOpen}
+          style={customStyles}
+          onRequestClose={closeModal}
+          closeTimeoutMS={200}
+          
+        >
+          <X size={20} className="mediumgrey" style={{position: 'absolute', top: 20, right: 20, cursor:'pointer'}} onClick={closeModal}/>
+          <p className="h4 primary ta-center">{title}</p>
+          
+          <Carousel 
+            axis="horizontal"
+            showStatus={false}
+            showThumbs={false}
+            showArrows
+            autoPlay
+            infiniteLoop
+            swipeable
+            transitionTime={200}
+            interval={10000}
+            emulateTouch
+            showIndicators={false}
+          >
+              {imageArray.map(image => {
+                return (
+                  <div className="carousel-more-image">
+                    <img src={image}/>
+                  </div>
+                )
+              })}
+
+          </Carousel>
+        </Modal>
+        
       </div>
     )
 }
@@ -120,10 +231,10 @@ const Activities = ({
                 title={item.title} 
                 date={item.date} 
                 description={item.description} 
-                image1={item.image1} 
-                image2={item.image2} 
-                image3={item.image3} 
+                venue={item.venue}
+                images={item.images} 
                 index={index+1}
+                speakers={item.speakers}
               />})
             }
           </Carousel>

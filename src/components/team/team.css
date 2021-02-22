@@ -165,13 +165,13 @@
         align-items: center;
         justify-content: center;
         width: calc(100% - 20px);
-        height: 200px;
+        height: 180px;
         background: #ABABAB1a;
         border-radius: 8px;
-        padding: 50px 10px 10px 10px;
+        padding: 20px 10px 10px 10px;
         position: relative;
-        padding-top: 60px;
-        border-bottom: 8px solid transparent;
+        padding-top: 20px;
+        border-bottom: 40px solid transparent;
         cursor: pointer;
         transition: 0.25s ease-in-out;
         margin: 0 auto;
@@ -185,5 +185,43 @@
     .team-bottom {
         margin-top: 0px;
         padding: 0 0;
+    }
+    .tb0 {
+        border-color: var(--blue);
+    }
+    
+    .tb1 {
+        border-color: var(--yellow);
+    }
+    
+    .tb2 {
+        border-color: #7E08D9;
+    }
+    
+    .tb3 {
+        border-color: var(--green);
+    }
+    
+    .tb4 {
+        border-color: #0068C8;
+    }
+    .view-button {
+        opacity: 1;
+        display: block;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 1px;
+        animation: opacity 1.4s;
+        position: absolute; 
+        bottom: -30px;
+        margin-top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .team-icon {
+        display: none;
+    }
+    .team-box img {
+        display: none;
     }
 }

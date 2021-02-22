@@ -107,7 +107,7 @@ const TeamLeaders = ({
             
             <p className="h0 primary ta-center " style={{marginTop:100}}>Meet the team</p>
 
-            <p className="t0 mediumgrey ta-center " style={{width:'60%', margin:'20px auto'}}>Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do Lorem ipsum dolor sit amet consecutueur, El suo carla dolor esmi reme adipiscingtel lu garcia </p>
+            <p className="t0 mediumgrey ta-center " style={{width:'60%', margin:'20px auto'}}>The ITSA Committee consists of 46 highly talented people from the second, third and fourth years, who manage various aspects of ITSA's activities and also enrich their knowledge through it. </p>
             
             <ScrollAnimation 
                     animateIn="fadeIn"
