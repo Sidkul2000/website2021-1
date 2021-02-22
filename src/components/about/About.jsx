@@ -66,6 +66,7 @@ const About = ({
 
     const [scrollHeight, setScrollHeight] = useState(0)
 
+    let scrolled = 0
 
     const images = importAll(require.context('../../assets', false, /\.(jpeg|jpg|JPG)$/ )) 
 
@@ -73,7 +74,8 @@ const About = ({
     useEffect(() => {
 
         window.addEventListener('scroll', () => {
-            setScrollHeight(document.documentElement.scrollTop - document.querySelector('.landing-container').clientHeight - window.innerHeight )
+            
+            setScrollHeight(document.documentElement.scrollTop - window.innerHeight - window.innerHeight )
         })
 
     }, [])

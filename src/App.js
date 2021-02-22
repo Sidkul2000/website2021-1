@@ -17,16 +17,7 @@ import './global.css'
 
 const App = ({}) => {
     return (
-        // <Scrollbars 
-        //   style={{width:'100vw', height:'100vh', backgroundColor: 'transparent'}}
-        //   autoHide
-        //   autoHideDuration={1000}
-        //   autoHideTimeout={800}
-        //   renderThumbVertical={({ style, ...props }) =>
-        //   <div {...props} className="scrollbar" style={{ ...style}}/>
-        //   }
-          
-        // >
+        
         <div>
             <ThemeProvider>
                 <BrowserRouter>
@@ -47,18 +38,6 @@ const App = ({}) => {
                        <Route path="/teams" exact>
                         <Teams />
                        </Route>
-
-                       <Route path="*" render={props => 
-                        <Fragment>
-                            <Landing {...props}/>
-                            <About {...props}/>
-                            <TeamLeaders/>
-                            <Team {...props}/>
-                            <Activities {...props}/>
-                            <Footer {...props}/>
-                            <Sidebar/>
-                        </Fragment>
-                    }/>
 
                     </Switch>
                 </BrowserRouter>
