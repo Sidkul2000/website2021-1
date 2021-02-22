@@ -63,3 +63,9 @@ export const isElementInViewport = el => {
         rect.left < (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */ &&
         rect.top < (window.innerHeight || document.documentElement.clientHeight) /* or $(window).height() */;
 }
+
+export function importAll(r) {
+    let images = {};
+      r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
+	    return images
+}

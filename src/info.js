@@ -5,92 +5,91 @@ import fullCommitteeInfo from './fullCommitteeInfo.json'
 export const teamLeadersInfo = [
     {
         title:'Sushant Vernekar',
-        image:'https://picsum.photos/200',
+        image:'https://drive.google.com/open?id=119B8a9J_ljKGrPe04_1zu8m4WEmp1h0J',
         description:'Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do Lorem ipsum dolor sit amet consecutueur, El suo carla dolor esmi reme adipiscingtel lu garcia ',
         role:'General Secretary',
         social:
             {
-                instagram:'https://www.instagram.com',
-                linkedin:'https://www.linkedin.com',
-                facebook:'https://www.facebook.com'
+                instagram:'https://instagram.com/sushantvernekar?igshid=qfmnhi5zo29a',
+                linkedin:'https://www.linkedin.com/in/sushant-vernekar-98a00a181/',
+                github:'https://github.com/Sushantvernekar60'
             }
         
     },
     {
         title:'Riya Parekh',
-        image:'https://picsum.photos/200',
+        image:'https://drive.google.com/open?id=1CMP6_6hJEVD4jeSHY8dHC5mGHSqkI3OS',
         description:'Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do Lorem ipsum dolor sit amet consecutueur, El suo carla dolor esmi reme adipiscingtel lu garcia ',
         role:'Joint General Secretary',
         social:
             {
-                instagram:'https://www.instagram.com',
-                linkedin:'https://www.linkedin.com',
-                facebook:'https://www.facebook.com'
+                instagram:'https://www.instagram.com/riyaparekh_09/',
+                linkedin:'https://www.instagram.com/riyaparekh_09/',
+                github:'https://github.com/RiyaParekh1234'
             }
         
     },
     {
         title:'Bhujang Shinde',
-        image:'https://picsum.photos/200',
+        image:'https://drive.google.com/open?id=1zZ7fJ_UPxMAO4lBfJKZRuPbF91-dfP0l',
         description:'Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do Lorem ipsum dolor sit amet consecutueur, El suo carla dolor esmi reme adipiscingtel lu garcia ',
         role:'Head of Web & Tech',
         social:
             {
-                instagram:'https://www.instagram.com',
-                linkedin:'https://www.linkedin.com',
-                facebook:'https://www.facebook.com'
+                instagram:'https://www.instagram.com/its_nik____/',
+                linkedin:'https://www.linkedin.com/in/bhujang-shinde/',
+                github:'https://github.com/shindeBhuj/'
             }
         
     },
     {
-        title:'Sushant Vernekar',
-        image:'https://picsum.photos/200',
+        title:'Pranashree Patil',
+        image:'https://drive.google.com/open?id=1A6A1WR-LMUYpIBCB-G3U5i7i7IxATHTO',
         description:'Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do Lorem ipsum dolor sit amet consecutueur, El suo carla dolor esmi reme adipiscingtel lu garcia ',
-        role:'General Secretary',
+        role:'Head of Notification',
         social:
             {
-                instagram:'https://www.instagram.com',
-                linkedin:'https://www.linkedin.com',
-                facebook:'https://www.facebook.com'
+                instagram:'https://instagram.com/pranashree_patil?igshid=7c3by2y5yngv',
+                linkedin:'https://www.linkedin.com/in/pranashree-patil-73382018a',
+                github:'https://github.com/pranashreepatil'
             }
         
     },
     {
-        title:'Sushant Vernekar',
-        image:'https://picsum.photos/200',
+        title:'Shreya Kajbaje',
+        image:'https://drive.google.com/open?id=11PzzlYXyNBr8_MgJspnfpagtQ1pfudbD',
         description:'Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do Lorem ipsum dolor sit amet consecutueur, El suo carla dolor esmi reme adipiscingtel lu garcia ',
-        role:'General Secretary',
+        role:'Head of Finance',
         social:
             {
-                instagram:'https://www.instagram.com',
-                linkedin:'https://www.linkedin.com',
-                facebook:'https://www.facebook.com'
+                instagram:'https://www.instagram.com/shreya_k9_/',
+                linkedin:'https://www.linkedin.com/in/shreya-kajbaje',
+                github:'https://github.com/shreyakajbaje'
             }
         
     },
     {
-        title:'Sushant Vernekar',
-        image:'https://picsum.photos/200',
+        title:'Kaushal Bhandari',
+        image:'https://drive.google.com/open?id=1QzmeR79TkZK_Io2CMZ4phKLSKVGEZtKk',
         description:'Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do Lorem ipsum dolor sit amet consecutueur, El suo carla dolor esmi reme adipiscingtel lu garcia ',
-        role:'General Secretary',
+        role:'Head of Student Coordination & Printing',
         social:
             {
-                instagram:'https://www.instagram.com',
-                linkedin:'https://www.linkedin.com',
-                facebook:'https://www.facebook.com'
+                instagram:'https://instagram.com/kaushal__bhandari?igshid=4zvmi6y2q0no',
+                linkedin:'https://www.linkedin.com/in/kaushal-bhandari-2334091b2',
             }
         
     },
     {
-        title:'Sushant Vernekar',
-        image:'https://picsum.photos/200',
+        title:'Jui Godse',
+        image:'https://drive.google.com/open?id=1LBO24BpUFVEuTfedhSKRbwSbw3sLYGmD',
         description:'Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do Lorem ipsum dolor sit amet consecutueur, El suo carla dolor esmi reme adipiscingtel lu garcia ',
-        role:'General Secretary',
+        role:'Head of Event Management & production',
         social:
             {
-                instagram:'https://www.instagram.com',
-                linkedin:'https://www.linkedin.com',
-                facebook:'https://www.facebook.com'
+                instagram:'instagram.com/juigodse',
+                linkedin:'https://www.linkedin.com/in/jui-godse-b089a71b2',
+                github:'github.com/jui221'
             }
         
     },
