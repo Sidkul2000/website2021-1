@@ -48,7 +48,7 @@
 
 .feature {
     width: 28%;
-    height: 400px;
+    height: 380px;
     border-radius: 10px;
     background-color: #ABABAB1a;
     cursor: pointer;
@@ -92,7 +92,7 @@
 
 .feature-1 {
     animation: float 3s ease-in-out infinite;
-    margin-top: 12%;
+    margin-top: 14%;
     border-bottom-color: var(--green);
 }
 .feature-1 .feature-image-container {
@@ -114,7 +114,7 @@
 
 .feature-2 {
     animation: float2 3s ease-in-out infinite;
-    margin-top: 20%;
+    margin-top: 24%;
     border-bottom-color: var(--blue);
 }
 .feature-2 .feature-image-container {
@@ -162,9 +162,10 @@
     width: calc(90%);
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: 10px;
-    height: 68%;
-    padding: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 60%;
+    /* padding: 20px 0; */
     background-color: transparent;
     border-radius: 5px;
     display: flex;
@@ -172,16 +173,19 @@
     transition: 0.25s ease-in;
 }
 
+.feature-0 video, .feature-1 video {
+    transform: scale(1.4);
+}
 
  
-.feature-image-container-hover img {
+.feature-image-container-hover img , .feature-image-container video {
     width: 100%;
     object-fit: fill;
     transition: 0.25s ease-in-out !important;
     border-radius: 10px;
 }
 
-.feature-image-container img {
+.feature-image-container img , .feature-image-container video {
     width: 100%;
     object-fit: fill;
     transition: 0.25s ease-in-out !important;
@@ -238,14 +242,14 @@
     -webkit-text-fill-color: transparent;
     -webkit-animation: shine 10s linear infinite;
     animation: shine 10s linear infinite;
-    padding-left: 10%;
+    padding-left: 0%;
     font-weight: 800;
     padding-right: 10px;
 }
 
 .itsa-desc-text {
     padding-left: 60px;
-    width: 90%;
+    width: 100%;
     font-size: 17px;
 }
 
@@ -254,38 +258,148 @@
 }
 
 .sticky-container {
-    position: sticky;
+    /* position: sticky; */
     top: 0;
-    height: 100vh;
     width: 100%;
+    padding-bottom: 80px;
     overflow-x: hidden;
 }
 
 .horizontal-translate-container {
-    position: absolute;
-    height: calc(100% - 230px);
+    /* position: absolute; */
+    left: 0;
     will-change: transform;
+    transform: translate3d(0,0,0);
+    transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
+.horizontal-translate-container::-webkit-scrollbar {
+    display: none;
+}
 .cards-container {
     position: relative;
     height: 100%;
-    padding: 0 0 0 0px;
+    padding: 0 0 0 20px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
+    width: auto;
 }
 
 .sample-card {
     position: relative;
-    height: 70vh;
-    width: 500px;
-    background-color: #ABABAB10;
+    height: 500px;
+    width: 400px;
+    background-color: transparent;
     margin-right: 20px;
     flex-shrink: 0;
     border-radius: 10px;
+    overflow: hidden;
 }
+
+.triple-width {
+    width: 600px !important;
+}
+
+.single-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gainsboro;
+}
+
+.double-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.double-card-upper {
+    width: 100%;
+    height: calc(100% - 10px);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: greenyellow;
+}
+
+.double-card-lower {
+    width: 100%;
+    height: calc(100% - 10px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: khaki;
+}
+
+.triple-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.triple-card-left {
+    width: calc(45% - 10px);
+    height: 100%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.triple-card-left-upper, .triple-card-left-lower {
+    width: 100%;
+    height: calc(50% - 10px);
+    border-radius: 10px;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.triple-card-left-lower {
+    margin-top: 10px;
+}
+
+.triple-card-left-upper {
+    margin-bottom: 10px;
+}
+
+.triple-card-right {
+    width: calc(55% - 10px);
+    margin-left: 0px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: orange;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-card img,  .double-card img, .triple-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* .single-card:hover, .double-card-lower:hover, .double-card-upper:hover, .triple-card-left-upper:hover, .triple-card-left-lower:hover, .triple-card-right:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: 0.45s ease;
+} */
 
 .teacher-box {
     

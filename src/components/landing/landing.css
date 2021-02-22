@@ -144,7 +144,7 @@
     cursor: pointer;
     transition: 0.25s ease-in-out;
     box-shadow: 4px 4px 50px #0085FF4a;
-    background: linear-gradient(-45deg,#02b902 , #02B93F, #02b98b ,  #02a4b9 , #008CCE, #0085FF, #1578FF, #2453FF, #4B44FF,#008CCE, #02a4b9);
+    background: linear-gradient(-45deg, #02b98b ,  #02a4b9 , #008CCE, #0085FF, #1578FF, #2453FF, #4B44FF,#008CCE, #02a4b9);
 	background-size: 300% 300%;
 	animation: gradient 10s ease-in-out infinite;
 }

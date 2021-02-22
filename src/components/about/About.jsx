@@ -3,50 +3,36 @@ import ScrollAnimation from 'react-animate-on-scroll'
 
 import './about.css'
 import curve from '../../assets/curve.svg'
-import sample from '../../assets/sample.png'
+import { importAll, isElementInViewport } from '../../utils'
+import kurukshetra from '../../assets/kurukshetra.mp4'
+import fiesta from '../../assets/fiesta.mp4'
+import acedamic from '../../assets/acedamic.mp4'
 
 const aboutInfo = [
     {
         title:'Gaming Events',
         description:"Kurukshetra is ITSA's gaming event where students show off their gaming skills & win exciting prizes",
+        media: kurukshetra
     },
     {
-        title:'Webinars',
-        description:'ITSA conducts various webinars throughout the year to boost student knowledge',
+        title:'Fiesta',
+        description:"ITSA's annual event Fiesta involves fun filled technical and non technical activites",
+        media: fiesta
     },
     {
         title:'Academic Workshops',
         description:'Workshops on various technical and non technical topics are conducted by ITSA committee every year',
+        media: acedamic
     },
 ]
 
-
-const calcDynamicHeight = objectWidth => {
-    const vw = window.innerWidth
-    const vh = window.innerHeight
-    return objectWidth - vw + vh + 150
-}
-  
-
-const handleDynamicHeight = (ref, setDynamicHeight) => {
-    const objectWidth = ref.current.scrollWidth
-    const dynamicHeight = calcDynamicHeight(objectWidth)
-    setDynamicHeight(dynamicHeight)
-}
-  
-
-const applyScrollListener = (ref, setTranslateX) => {
-    window.addEventListener("scroll", () => {
-      const offsetTop = ref.current ? -ref.current.offsetTop  : 0
-      setTranslateX(offsetTop)
-    })
-}
 
 
 const AboutCard = ({
     title, 
     description,
-    index
+    index,
+    media
 }) => {
 
     const [isHovering, setIsHovering] = useState(true)
@@ -59,7 +45,7 @@ const AboutCard = ({
             onMouseLeave={() => setIsHovering(true)}
         >
             <div className={isHovering ? "feature-image-container-hover":"feature-image-container"}>
-                <img src="https://picsum.photos/500/300"/>
+                <video src={media} autoPlay loop muted/>
             </div>
             <div className={isHovering ? "feature-info-hover":"feature-info"}>
                 <p className={`h4 ta-center feature-title-${index}`}>{title}</p>
@@ -78,28 +64,80 @@ const About = ({
     props
 }) => {
 
-    const [dynamicHeight, setDynamicHeight] = useState(null)
-    const [translateX, setTranslateX] = useState(0)
+    const [scrollHeight, setScrollHeight] = useState(0)
 
-    const containerRef = useRef(null)
-    const objectRef = useRef(null)
 
-    const resizeHandler = () => {
-        handleDynamicHeight(objectRef, setDynamicHeight)
-    }
-    
+    const images = importAll(require.context('../../assets', false, /\.(jpeg|jpg|JPG)$/ )) 
+
 
     useEffect(() => {
 
-        handleDynamicHeight(objectRef, setDynamicHeight)
-        window.addEventListener("resize", resizeHandler)
-        applyScrollListener(containerRef, setTranslateX)
+        window.addEventListener('scroll', () => {
+            setScrollHeight(document.documentElement.scrollTop - document.querySelector('.landing-container').clientHeight - window.innerHeight )
+        })
 
     }, [])
 
-    const SampleCard = () => {
-        return <div className="sample-card"></div>
+    const SingleCard = ({
+        srcImage
+    }) => {
+        
+        return (
+            <div className="single-card">
+                <img src={srcImage}/>
+            </div>
+        )
     }
+
+    const DoubleCard = ({
+        srcImage1,
+        srcImage2, 
+    }) => {
+        return (
+            <div className="double-card">
+                <div className="double-card-upper">
+                    <img src={srcImage1}/>
+                </div>
+                <div className="double-card-lower">
+                    <img src={srcImage2}/>
+                </div>
+            </div>
+        )
+    }
+
+    const TripleCard = ({
+        srcImage1,
+        srcImage2,
+        srcImage3
+    }) => {
+        return (
+            <div className="triple-card">
+                <div className="triple-card-left">
+                    <div className="triple-card-left-upper">
+                        <img src={srcImage1}/>
+                    </div>
+                    <div className="triple-card-left-lower">
+                        <img src={srcImage2}/>
+                    </div>
+                </div>
+                <div className="triple-card-right">
+                    <img src={srcImage3}/>
+                </div>
+            </div>
+        )
+    }
+
+    const SampleCard = ({single, double, triple, src1, src2, src3}) => {
+        
+        return (
+            <div className={triple ? "sample-card triple-width" : "sample-card"}>
+                {
+                    single ? <SingleCard srcImage={src1}/> 
+                    : double ? <DoubleCard srcImage1={src1} srcImage2={src2}/>
+                    : triple ? <TripleCard srcImage1={src1} srcImage2={src2} srcImage3={src3}/> : null
+                }
+            </div>
+    )}
     
     return (
         <div className="section-container about-container">
@@ -117,7 +155,7 @@ const About = ({
                         animateOnce
                 >
                     <p className="h2 primary">What does ITSA do ?</p>
-                    <p className="t0 mediumgrey">Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do  </p>
+                    <p className="t0 mediumgrey">Throughout the acedamic year, ITSA conducts exciting events and activites both within and outside the department</p>
                 </ScrollAnimation>
             </div>
 
@@ -127,7 +165,7 @@ const About = ({
 
                 {
                     aboutInfo.map((item, index) => {
-                        return <AboutCard title={item.title} description={item.description} index={index}/>
+                        return <AboutCard title={item.title} description={item.description} index={index} media={item.media}/>
                     })
                 }
                
@@ -152,28 +190,34 @@ const About = ({
                             delay={100}
                             animateOnce
                         >
-                            <p className="itsa-desc-text t0 mediumgrey">Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, elifi aso su carla lu ef</p>
-                            <p className="itsa-desc-text t0 mediumgrey">Lorem ipsum dolor sit amet consecutueur regino psal sodam dowe remol adipisicing elit, sed do Lorem ipsum dolor sit amet consecutueur </p>
+                            <p className="itsa-desc-text t0 mediumgrey">ITSA stands for Information Technology Student's Association.</p>
+                            <br/>
+                            <p className="itsa-desc-text t0 mediumgrey">Throughout the acedamic year, we conduct various events, workshops, competitions, webinars and exciting activites that enrich the student's lives and widens their knowledge bases</p>
                         </ScrollAnimation>
                 </div>
             </div>
 
             
 
-            <div style={{height: `${dynamicHeight}px`, position: 'relative', width:'100%'}}>
+            <div style={{position: 'relative', width:'100%'}}>
             
-                <div className="sticky-container" ref={containerRef}>
+                <div className="sticky-container">
                     
                     <p className="h0 ta-center primary recentworks-text">Recent Works</p>
                     
 
-                    <div className="horizontal-translate-container" style={{ transform: `translateX(${translateX}px)` }} ref={objectRef}>
+                    <div className="horizontal-translate-container" style={{transform:`translateX(-${scrollHeight}px)`}}>
                         <div className="cards-container">
-                        {
-                            Array(5)
-                                .fill(0)
-                                .map((_e, i) => <SampleCard key={`sampleCard-${i}`} />)
-                        }
+                        
+                            <SampleCard single src1={images['e1.1.JPG'].default}/>
+                            <SampleCard triple src1={images['e3.1.JPG'].default} src2={images['e3.2.JPG'].default} src3={images['e1.2.JPG'].default}/>
+                            <SampleCard double src1={images['e2.1.JPG'].default} src2={images['e2.2.JPG'].default}/>
+                            <SampleCard single src1={images['e1.3.JPG'].default}/>
+                            <SampleCard double src1={images['e2.3.JPG'].default} src2={images['e2.4.JPG'].default}/>
+                            <SampleCard single src1={images['e1.1.JPG'].default}/>
+                            <SampleCard triple src1={images['e3.1.JPG'].default} src2={images['e3.2.JPG'].default} src3={images['e1.2.JPG'].default}/>
+                            <SampleCard double src1={images['e2.1.JPG'].default} src2={images['e2.2.JPG'].default}/>
+                            
 
                         </div>
                     </div>

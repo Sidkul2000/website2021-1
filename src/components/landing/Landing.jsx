@@ -37,7 +37,7 @@ const Landing = ({
             
             <div id="scene"> 
 
-                <div data-depth={0.3} className="parallax-green-large">
+                <div data-depth={0.8} className="parallax-green-large">
                     <img src={parallaxgreen} className="parallax-shadow"/>
                 </div>
                 <div data-depth={0.3} className="parallax-yellow-large">
@@ -110,7 +110,7 @@ const Landing = ({
                 >
  
                     <button className="know-more-button" onClick={goToAbout}>
-                        <p className="h5 white">Know More</p>
+                        <p className="h5 white">Explore ITSA Activities</p>
                     </button>
 
                 </ScrollAnimation>

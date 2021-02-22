@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from 'react-feather'
 import { teamLeadersInfo } from '../../info'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 import './teamleaders.css'
 import { useTheme } from '../../context/ThemeContext'
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 
 const TeamLeaders = ({
@@ -135,14 +135,17 @@ const TeamLeaders = ({
                 {
                     teamLeadersInfo.map((item, index) => {
                         return (
+                            <Fragment>
                             <div
                                 className={`${getIndex()[index]} outer`}
-                                style={{backgroundImage:`url(${item.image})`}}
+                                style={{backgroundImage:`url(${item.image.replace('open?', 'uc?')})`}}
                                 onClick={() => setActiveIndex(index)}
                             >
+                                
                                 <div className={theme==='dark' ? "hexagon" : "hexagon lighthexagon"}></div> 
                             </div>
-
+                            
+                            </Fragment>
                         )
                     })
                 }
@@ -164,7 +167,7 @@ const TeamLeaders = ({
                         return (
                             s === 'instagram' ? <a href={teamLeadersInfo[activeIndex].social.instagram} target="_blank"><FaInstagram size={20} className="primary"/></a> : 
                             s === 'linkedin' ? <a href={teamLeadersInfo[activeIndex].social.linkedin} target="_blank"><FaLinkedin size={20} className="primary"/></a> : 
-                            s === 'facebook' ? <a href={teamLeadersInfo[activeIndex].social.facebook} target="_blank"><FaFacebook size={20} className="primary"/></a> : null 
+                            s === 'github' ? <a href={teamLeadersInfo[activeIndex].social.github} target="_blank"><FaGithub size={20} className="primary"/></a> : null 
                         )
                     })}
                     </div>

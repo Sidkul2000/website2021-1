@@ -172,7 +172,20 @@
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
-    
+    z-index: 1;
+}
+
+.active-item + .back-shadow {
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 0;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 10px 10px 140px 10px var(--blue);
 }
 
 .hexagon.lighthexagon {
@@ -184,6 +197,10 @@
     background-size: contain;
     border-radius: 40px;
     background-color: red !important;
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
 }
 
 
@@ -239,12 +256,15 @@
     .team-leaders-container {
         width: 100%;
         padding-left: 0px;
-        padding-top: 20px;
+        padding-top: 0px;
         height: auto;
         justify-content: center;
         display: flex;
         flex-direction: column;
         background-color: var(--background);
+    }
+    .team-leaders-container .h0.primary.ta-center {
+        margin-top: 20px !important;
     }
     
     .slider-container {
