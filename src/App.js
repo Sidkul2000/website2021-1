@@ -20,7 +20,7 @@ const App = ({}) => {
         
         <div>
             <ThemeProvider>
-                <BrowserRouter>
+                <BrowserRouter basename={process.env.PUBLIC_URL}>
                     <Switch>
                        
                        <Route path="/" exact render={props => 
