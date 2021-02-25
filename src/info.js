@@ -105,7 +105,7 @@ export const teamsInfo = [
     },
     {
         teamName:'Team Notification',
-        description:'The notification teams acts as a birdge between students and committee members, keeps participants updated about the team events and presides over solving students queries and difficulties.',
+        description:'The notification teams acts as a bridge between students and committee members, keeps participants updated about the team events and presides over solving students queries and difficulties.',
         teamColor:'#FFDB00',
         teamMembers : fullCommitteeInfo.filter(person => person.team === 'notification').sort((a, b) => a.class > b.class ? 1 : -1)
     },
@@ -117,15 +117,53 @@ export const teamsInfo = [
     },
     {
         teamName:'Team Student Coordination and Printing',
-        description:'Team event management handles pre-event organization, ensuring that event day logistics run smoothly, gathering reports of executed events and activities as well as provides a platform for students to showcase their skills in photography and video editing',
+        description:'Team student coordination and printing udertakes various activities such as maintaining coordination between teams, T-Shirt and poster designing, sponsorships and slot allotment during events',
         teamColor:'#02B93F',
         teamMembers : fullCommitteeInfo.filter(person => person.team === 'student coordination').sort((a, b) => a.class > b.class ? 1 : -1)
     },
     {
         teamName:'Team Event Management and Production',
-        description:'Team student coordination and printing udertakes various activities such as maintaining coordination between teams, T-Shirt and poster designing, sponsorships and slot allotment during events',
+        description:'Team event management handles pre-event organization, ensuring that event day logistics run smoothly, gathering reports of executed events and activities as well as provides a platform for students to showcase their skills in photography and video editing',
         teamColor:'#0085FF',
         teamMembers : fullCommitteeInfo.filter(person => person.team === 'event management & production').sort((a, b) => a.class > b.class ? 1 : -1)
     },
     
 ]
+
+export const imageAssets = [
+    require('./assets/curve.svg').default,
+    require('./assets/e1.1.JPG').default,
+    require('./assets/e1.2.JPG').default,
+    require('./assets/e1.3.JPG').default,
+    require('./assets/e2.1.JPG').default,
+    require('./assets/e2.2.JPG').default,
+    require('./assets/e2.3.JPG').default,
+    require('./assets/e2.4.JPG').default,
+    require('./assets/e2.5.jpeg').default,
+    require('./assets/e2.5.jpg').default,
+    require('./assets/e3.1.JPG').default,
+    require('./assets/e3.2.JPG').default,
+    require('./assets/e3.3.JPG').default,
+    require('./assets/event-team.svg').default,
+    require('./assets/fin-team.svg').default,
+    require('./assets/logo.png').default,
+    require('./assets/not-team.svg').default,
+    require('./assets/parallax-blue.svg').default,
+    require('./assets/parallax-green.svg').default,
+    require('./assets/parallax-grey.svg').default,
+    require('./assets/parallax-yellow.svg').default,
+    require('./assets/pentagon-white.svg').default,
+    require('./assets/pentagon.svg').default,
+    require('./assets/polygon.svg').default,
+    require('./assets/print-team.svg').default,
+    require('./assets/tech-team.svg').default,
+]
+
+export const videoAssets = [
+    require('./assets/acedamic.mp4').default,
+    require('./assets/fiesta.mp4').default,
+    require('./assets/kurukshetra.mp4').default,
+]
+
+export const fullCommitteeImages = Array.from(fullCommitteeInfo.map(obj => obj.profilePicture.replace('open?', 'uc?')))
+                                

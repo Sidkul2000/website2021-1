@@ -2,7 +2,7 @@ import React from 'react'
 import { useTheme } from '../../context/ThemeContext'
 import './footer.css'
 import {FaGithub,FaFacebook,FaInstagram,FaLinkedin,FaMapMarkerAlt,FaPhoneAlt,FaExternalLinkAlt} from "react-icons/fa";
-import { ExternalLink, Link, Link2, Mail, Map, Phone } from 'react-feather';
+import { Command, ExternalLink, Link, Link2, Mail, Map, Phone } from 'react-feather';
 
 
 const Footer = () => {
@@ -34,11 +34,11 @@ const Footer = () => {
          {/* middle contact section */}
           <section className="footer-info-center">
             <section className="contact">
-              <Mail className="link-pad" size={25}/>
+              <Command className="link-pad" size={25}/>
             </section>
             <section className="Email">
-              <h3 className="h4">Contact us at </h3>
-              <a href="mailto:itsapvg@gmail.com" className="t0" style={{textDecoration: 'none'}}>itsapvgcoet@gmail.com</a>
+              <h3 className="h4">Check us out on Linktree</h3>
+              <a href="https://linktr.ee/itsapvg" className="t0" style={{textDecoration: 'none'}}>https://linktr.ee/itsapvg</a>
             </section>
           </section>
 

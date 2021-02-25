@@ -75,7 +75,7 @@ const About = ({
 
         window.addEventListener('scroll', () => {
             
-            setScrollHeight(document.documentElement.scrollTop - window.innerHeight - window.innerHeight )
+            setScrollHeight(document.documentElement.scrollTop - window.innerHeight * 1.75 )
         })
 
     }, [])
@@ -151,9 +151,9 @@ const About = ({
             <div className="about-title">
                 <ScrollAnimation 
                         animateIn="fadeIn"
-                        offset={50}
-                        duration={1.2}
-                        delay={200}
+                        offset={20}
+                        duration={1}
+                        delay={20}
                         animateOnce
                 >
                     <p className="h2 primary">What does ITSA do ?</p>

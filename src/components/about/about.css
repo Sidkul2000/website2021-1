@@ -307,7 +307,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: gainsboro;
+    background-color: #ABABAB1A;
 }
 
 .double-card {
@@ -327,7 +327,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: greenyellow;
+    background-color: #ABABAB1A;
 }
 
 .double-card-lower {
@@ -337,7 +337,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: khaki;
+    background-color: #ABABAB1A;
 }
 
 .triple-card {
@@ -361,7 +361,7 @@
     width: 100%;
     height: calc(50% - 10px);
     border-radius: 10px;
-    background-color: aquamarine;
+    background-color: #ABABAB1A;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -381,7 +381,7 @@
     margin-left: 0px;
     height: 100%;
     border-radius: 10px;
-    background-color: orange;
+    background-color: #ABABAB1A;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -464,19 +464,24 @@
     }
     .feature {
         width: 80%;
-        height: 400px;
+        height: 370px;
         border-radius: 10px;
         background-color: #ABABAB1a;
         cursor: pointer;
         display: flex;
         flex-direction: column;
-        border-bottom: 8px solid transparent;
+        border-bottom: 8px solid;
+    }
+    .feature-0 {
+        border-bottom-color: var(--yellow);
     }
     .feature-1 {
         margin-top: 30px;
+        border-bottom-color: var(--green);
     }
     .feature-2 {
         margin-top: 30px;
+        border-bottom-color: var(--blue);
     }
     .itsa-def {
         width: 100%;

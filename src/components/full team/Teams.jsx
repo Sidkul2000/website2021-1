@@ -1,60 +1,37 @@
-import React, { useEffect } from 'react'
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
-
+import React, { useEffect, useState } from 'react'
 import './teams.css'
 import TeamMember from './TeamMember'
 import TeamSidebar from './TeamSidebar'
 import Footer from '../footer/Footer'
-import { teamLeadersInfo, teamsInfo } from '../../info'
+import { fullCommitteeImages, teamsInfo } from '../../info'
 import { ArrowLeft } from 'react-feather'
 import { Link } from 'react-router-dom'
 
-const teamMembers = [
-    {
-        name: "Member 1",
-        year: "TE"
-    },
-    {
-        name: "Member 2",
-        year: "TE"
-    },
-    {
-        name: "Member 3",
-        year: "TE"
-    },
-    {
-        name: "Member 4",
-        year: "TE"
-    },
-    {
-        name: "Member 5",
-        year: "SE"
-    },
-    {
-        name: "Member 6",
-        year: "SE"
-    },
-    {
-        name: "Member 7",
-        year: "SE"
-    },
-    {
-        name: "Member 8",
-        year: "SE"
-    },
-
-]
-
+import { loadImage } from '../../utils'
 
 const Teams = ({
     props
 }) => {
 
+    const [imagesLoaded, setImagesLoaded] = useState(false)
+
     useEffect(() => {
-        window.scroll({top:0, left:0, behavior:'auto'})
+        
+        Promise.all(fullCommitteeImages.map(image => loadImage(image)))
+            .then(() => {
+                setImagesLoaded(true)
+                const count = parseInt(window.location.href.split('/')[5])
+                console.log(count)
+                window.scroll({
+                    top: window.innerHeight * count, 
+                    left:0, 
+                    behavior:'auto'
+                })
+            })
+            .catch(err => console.log("Failed to load images", err))
     }, [])
     
-    return (
+    return imagesLoaded ? (
         <div>
 
         <TeamSidebar />
@@ -115,7 +92,13 @@ const Teams = ({
         </div>
         <Footer />
         </div>
-    )
+    ) : <div className='loading-container'>
+            <div className="ball-container">
+                <div className="ball"></div>
+            </div>
+            <p className="h3 white">Just a moment..</p>
+            <p className="t0 mediumgrey" style={{marginTop: 30}}>We are loading the website as fast as we can &#128516;</p>
+        </div>
 }
 
 export default Teams

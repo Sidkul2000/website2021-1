@@ -8,8 +8,8 @@
 }
 
 .card-container{
-  min-height: 80vh;
-  margin-top: 30px;
+  margin-top: 70px;
+  margin-bottom: 10px;
   background-color: var(--background);
 }
 .table{
@@ -18,9 +18,12 @@
   flex-direction: row;
   align-items: flex-start;
   height: 100%;
-  padding: 50px;
+  padding: 0px 50px;
   text-align:left;
   background-color: var(--background);
+}
+.table:nth-child(even) {
+  flex-direction: row-reverse !important;
 }
 
 
@@ -56,7 +59,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
-  width: 65%;
+  width: 60%;
 }
 
 .carousel-left * {
@@ -68,7 +71,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 35%;
+  width: 40%;
 }
 
 .carousel .slide {
@@ -128,6 +131,11 @@
   color: var(--blue);
 }
 
+.other-image img, .main-image img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
 .plus-more {
   position: relative;
   cursor: pointer;
@@ -225,6 +233,25 @@
 .speaker-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-root {
+  padding-right: 50px;
+  
+}
+
+.load-button {
+  width: fit-content;
+  margin: 40px 0;
+  margin-left: 50%;
+  cursor: pointer;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #ABABAB1A;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 

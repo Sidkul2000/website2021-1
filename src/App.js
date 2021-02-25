@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { BrowserRouter , Route , Switch } from 'react-router-dom'
 import { Scrollbars } from 'react-custom-scrollbars'
 
@@ -14,9 +14,31 @@ import TeamLeaders from './components/TeamLeaders/TeamLeaders'
 import { ThemeProvider } from "./context/ThemeContext"
 
 import './global.css'
+import { imageAssets, videoAssets } from './info'
+import { loadImage, loadVideo } from './utils'
+
 
 const App = ({}) => {
-    return (
+
+    const [imagesLoaded, setImagesLoaded] = useState(false)
+    const [videosLoaded, setVideosLoaded] = useState(false)
+
+    
+
+
+    useEffect(() => {
+        Promise.all(imageAssets.map(image => loadImage(image)))
+            .then(() => setImagesLoaded(true))
+            .catch(err => console.log("Failed to load images", err))
+            
+        Promise.all(videoAssets.map(video => loadVideo(video)))
+            .then(() => setVideosLoaded(true))
+            .catch(err => console.log("Failed to load videos", err))
+    }, [])
+
+
+
+    return imagesLoaded && videosLoaded ? (
         
         <div>
             <ThemeProvider>
@@ -35,7 +57,7 @@ const App = ({}) => {
                            </Fragment>
                        }/>
 
-                       <Route path="/teams" exact>
+                       <Route path="/teams/*" exact>
                         <Teams />
                        </Route>
 
@@ -43,8 +65,14 @@ const App = ({}) => {
                 </BrowserRouter>
             </ThemeProvider>
         </div>
-        // </Scrollbars>
-    )
+    ) 
+    : <div className='loading-container'>
+        <div className="ball-container">
+            <div className="ball"></div>
+        </div>
+        <p className="h3 white">Just a moment..</p>
+        <p className="t0 mediumgrey" style={{marginTop: 30}}>We are loading the website as fast as we can &#128516;</p>
+    </div>
 }
 
 export default App

@@ -32,51 +32,62 @@ const Team = ({
                         animateOnce
                     >
                     
-                    <Link to="/teams">
+                    
                     <div className="team-top">
+                        
+                        <Link to="/teams/0">
                             <div className='team-box tb0'>
                                 <img src={techteam}/>
                                 <Code className="primary team-icon"/>
                                 <p className='h4 primary'>Team Web and Tech</p>
-                                <p className='t1 mediumgrey ourteams-text'>Lorem ipsum dolor sit amet consecutueur regino psal sodam</p>
+                                <p className='t1 mediumgrey ourteams-text'>Manages the website & conducts technical events and workshops</p>
                                 <p className="h5 white view-button">View full team</p>
                             </div>
-                        
+                        </Link>
+                            
+                        <Link to="/teams/1">
                             <div className='team-box tb1'>
                                 <img src={notteam}/>
                                 <Bell className="primary team-icon"/>
                                 <p className='h4 primary'>Team Notification</p>
-                                <p className='t1 mediumgrey ourteams-text'>Lorem ipsum dolor sit amet consecutueur regino psal sodam</p>
+                                <p className='t1 mediumgrey ourteams-text'>Acts as a bridge between the committee and the students</p>
                                 <p className="h5 white view-button">View full team</p>
                             </div>
+                        </Link>
                         
+                        <Link to="/teams/2">
                             <div className='team-box tb2'>
                                 <img src={finteam}/>
                                 <DollarSign className="primary team-icon"/>
                                 <p className='h4 primary'>Team Finance</p>
-                                <p className='t1 mediumgrey ourteams-text'>Lorem ipsum dolor sit amet consecutueur regino psal sodam</p>
+                                <p className='t1 mediumgrey ourteams-text'>Tracks and manages the financial activites and budget of events</p>
                                 <p className="h5 white view-button">View full team</p>
                             </div>
+                        </Link>
                     </div>
 
                     <div className="team-bottom">
+                        <Link to="/teams/3">
                             <div className='team-box tb3'>
                                 <img src={printteam}/>
                                 <Layers className="primary team-icon"/>
                                 <p className='h4 primary'>Team Student Coordination and Printing</p>
-                                <p className='t1 mediumgrey ourteams-text'>Lorem ipsum dolor sit amet consecutueur regino psal sodam</p>
+                                <p className='t1 mediumgrey ourteams-text'>Responsible for poster design, T-Shirt printing and event slot allotment</p>
                                 <p className="h5 white view-button">View full team</p>
                             </div>
+                        </Link>
                         
+                        <Link to="/teams/4">
                             <div className='team-box tb4'>
                                 <img src={eventteam}/>
                                 <Film className="primary team-icon"/>
                                 <p className='h4 primary'>Team Event Management and Production</p>
-                                <p className='t1 mediumgrey ourteams-text'>Lorem ipsum dolor sit amet consecutueur regino psal sodam</p>
+                                <p className='t1 mediumgrey ourteams-text'>Handles the pre-event planning, logistics and event day programmes</p>
                                 <p className="h5 white view-button">View full team</p>
                             </div>
+                        </Link>
                     </div>
-                    </Link>
+                    
                     </ScrollAnimation>
                 
             </div>

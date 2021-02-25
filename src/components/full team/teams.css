@@ -121,7 +121,7 @@
 	background-color: #ABABAB1a;
 	border-radius: 100%;
 	display: flex;
-	align-items: center;
+	align-items: baseline;
 	justify-content: center;
 	overflow: hidden;
 	transition: 0.23s ease;

@@ -77,6 +77,7 @@ const activitiesInfo = [
         description:'Designing a WordPress website is a part of academics. So ITSA arranged a workshop on 10 th November to make students aware about WordPress platform. The training was held from home on an online platform from 1:00-2.30 PM for 1.5 hours. The workshop was conducted by Shreya Mahajan and Sakshi Chidrewar from BE IT. Students from Third Year and Second Year of Information Technology department participated in the workshop. From basic concepts to publishing their own website, all parts were included. Through interactive learning, students were able to publish a website.',
         images : importAll(require.context('../../assets/activities/wordpress-workshop', false, /\.(jpeg|jpg|JPG|png|PNG)$/ )) 
     },
+    
 ]
 
 
@@ -91,7 +92,7 @@ const Card = ({
 }) => {
 
     let imageArray = Object.values(images).map(img => img.default)
-    description = description.length > 400 ? description.slice(0,400).concat('...') : description
+    description = description.length > 500 ? description.slice(0,500).concat('...') : description
     
     const modalSlides = imageArray.map(image => {
       return {
@@ -121,7 +122,7 @@ const Card = ({
               </div>
               <p className="t1 mediumgrey" style={{letterSpacing: 0.6}}>CONDUCTED BY</p>
               <div className="speakers-container">
-                {speakers.map(speaker => {
+                {speakers ? speakers.map(speaker => {
                   return (
                     <div className="speaker">
                       <div className="speaker-photo">
@@ -133,7 +134,7 @@ const Card = ({
                       </div>
                     </div>
                   )
-                })}
+                }) : null}
                 
               </div>
               <p className="t0 mediumgrey contentcss">{description}</p>
@@ -206,6 +207,22 @@ const Activities = ({
     props
 }) => {
 
+    const [activitesCount, setActivitiesCount] = useState(2)
+    const [showLoadButton, setShowLoadButton] = useState(true)
+
+
+    const loadMore = () => {
+      if(activitesCount === activitiesInfo.length) {
+        setShowLoadButton(false)
+      }
+      else if(activitesCount <= activitiesInfo.length-2) {
+        setActivitiesCount(activitesCount+2)
+      } else {
+        setActivitiesCount(activitiesInfo.length - activitesCount)
+      }
+    }
+
+
     return (
         <div className="section-container activities-container">
           
@@ -213,7 +230,7 @@ const Activities = ({
             Our Activities
           </p>
 
-          <Carousel 
+          {/* <Carousel 
             axis="horizontal"
             showStatus={false}
             showThumbs
@@ -238,7 +255,38 @@ const Activities = ({
               />})
             }
           </Carousel>
+           */}
 
+          {
+            activitiesInfo
+              .slice(0, activitesCount)
+              .map((item, index) => {
+              return (
+                <Card
+                  title={item.title} 
+                  date={item.date} 
+                  description={item.description} 
+                  venue={item.venue}
+                  images={item.images} 
+                  index={index+1}
+                  speakers={item.speakers}
+                />
+              )
+            })
+          }
+
+          <div className="load-button" onClick={loadMore} style={{visibility: showLoadButton ? "visible" : "hidden"}}>
+            <p className="h5 mediumgrey">load more</p>
+          </div>
+
+          <p className="h3 primary ta-center"  style={{marginTop: 100}}>Have an idea for an event? Want to know more?</p>
+          <p className="t0 ta-center mediumgrey" style={{marginTop: 30, fontSize: 15, padding:'0 20px'}}>Get in touch with us on our email. We'll get back to you ASAP &#128516;</p>
+          
+          <button className="know-more-button join-itsa-button"  style={{marginTop: 40}}>
+            <a href="mailto:itsapvg@gmail.com">
+              <p className="h5 white">Write an email</p>
+            </a>
+          </button>
         </div>
     )
 }

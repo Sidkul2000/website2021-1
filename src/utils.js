@@ -69,3 +69,30 @@ export function importAll(r) {
       r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
 	    return images
 }
+
+export const loadImage = image => {
+  return new Promise ((resolve, reject) => {
+      const imageToLoad = new Image()
+      imageToLoad.src = image
+      
+      imageToLoad.onload = () => {
+          setTimeout(() => {
+              resolve(image)
+          }, 2000)
+          
+      }
+      imageToLoad.onerror = err => reject(err)
+  })
+}
+
+export const loadVideo = video => {
+  return new Promise ((resolve, reject) => {
+      const videoToLoad = document.createElement('video')
+      
+      videoToLoad.src = video
+      videoToLoad.load() 
+      resolve(video)
+      
+      videoToLoad.onerror = err => reject(err)
+  })
+}
