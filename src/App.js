@@ -64,6 +64,8 @@ const App = ({}) => {
                     </Switch>
                 </BrowserRouter>
             </ThemeProvider>
+            <p className="t1 ta-center mediumgrey">Designed by Yatish Kelkar</p>
+            <p className="t1 ta-center mediumgrey" style={{paddingBottom: 20, marginTop: 10}}>Developed by Yatish Kelkar, Mahesh Nahak, Gaurav Khairnar, Siddhant Kulkarni, Rasika Deshpande, Aadesh Jadhav, Shruti Salunkhe, Pranav Jadhav and Bhujang Shinde</p>
         </div>
     ) 
     : <div className='loading-container'>
