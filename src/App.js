@@ -65,7 +65,7 @@ const App = ({}) => {
                 </BrowserRouter>
             </ThemeProvider>
             <p className="t1 ta-center mediumgrey">Designed by Yatish Kelkar</p>
-            <p className="t1 ta-center mediumgrey" style={{paddingBottom: 20, marginTop: 10}}>Developed and maintained by Yatish Kelkar, Mahesh Nahak, Pranav Jadhav, Gaurav Khairnar and ITSA Web and Tech team</p>
+            <p className="t1 ta-center mediumgrey" style={{paddingBottom: 40, marginTop: 10}}>Developed and maintained by ITSA Web and Tech team</p>
         </div>
     ) 
     : <div className='loading-container'>
