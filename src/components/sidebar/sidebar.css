@@ -121,6 +121,20 @@
 	border: none;
 }
 
+.theme-icon {
+    cursor: pointer;
+    color: var(--mediumgrey);
+    transition: 0.25s ease-out;
+}
+.blue:hover {
+    color: var(--blue);
+    transition: 0.25s ease-out;
+}
+.yellow:hover {
+    color: var(--yellow);
+    transition: 0.25s ease-out;
+}
+
 .go-up {
     width: 40px;
     height: 40px;

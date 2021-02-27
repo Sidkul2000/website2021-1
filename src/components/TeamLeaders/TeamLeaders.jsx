@@ -122,7 +122,7 @@ const TeamLeaders = ({
 
             </ScrollAnimation>
            
-
+            <p className="h2 primary ta-center" style={{marginTop: 130}}>Our Team Leaders</p>
             {/* <p className="h2 primary ta-center mediumgrey">Our Team Leaders</p> */}
 
            

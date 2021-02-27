@@ -175,27 +175,13 @@ const About = ({
 
             <div className="itsa-def">
                     <div className="itsa-def-left">
-                        <ScrollAnimation 
-                            animateIn="fadeInUp"
-                            offset={70}
-                            delay={0}
-                            animateOnce
-                        >
-                            <p className="itsa-def-text h3">What is ITSA and what do we do ?</p>
-                        </ScrollAnimation>
+                        <p className="itsa-def-text h3">What is ITSA and what do we do ?</p>
                     </div>
                 
                 <div className="itsa-def-right">
-                        <ScrollAnimation 
-                            animateIn="fadeInUp"
-                            offset={70}
-                            delay={100}
-                            animateOnce
-                        >
-                            <p className="itsa-desc-text t0 mediumgrey">ITSA stands for Information Technology Student's Association.</p>
-                            <br/>
-                            <p className="itsa-desc-text t0 mediumgrey">Throughout the acedamic year, we conduct various events, workshops, competitions, webinars and exciting activites that enrich the student's lives and widens their knowledge bases</p>
-                        </ScrollAnimation>
+                    <p className="itsa-desc-text t0 mediumgrey">ITSA stands for Information Technology Student's Association.</p>
+                    <br/>
+                    <p className="itsa-desc-text t0 mediumgrey">Throughout the acedamic year, we conduct various events, workshops, competitions, webinars and exciting activites that enrich the student's lives and widens their knowledge bases</p>
                 </div>
             </div>
 
@@ -208,7 +194,7 @@ const About = ({
                     <p className="h0 ta-center primary recentworks-text">Recent Works</p>
                     
 
-                    <div className="horizontal-translate-container" style={{transform:`translateX(-${scrollHeight}px)`}}>
+                    <div className="horizontal-translate-container" style={{transform:`translateX(-${scrollHeight * 0.3}px)`}}>
                         <div className="cards-container">
                         
                             <SampleCard single src1={images['e1.1.JPG'].default}/>

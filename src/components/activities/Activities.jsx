@@ -105,10 +105,12 @@ const Card = ({
     const openModal = () => setOpen(true)
     const closeModal = () => setOpen(false)
 
+    const oddEven = index % 2 ? 'odd' : 'even'
+
     return(
       <div className="card-container">
          
-          <div class="table">
+          <div class={`table ${oddEven}`}>
           
             <div className="carousel-left left-side">
               
@@ -120,7 +122,9 @@ const Card = ({
                 <div className="dot"></div>
                 <p className="t2 mediumgrey contentcss" style={{textTransform:'uppercase'}}>{venue}</p>
               </div>
-              <p className="t1 mediumgrey" style={{letterSpacing: 0.6}}>CONDUCTED BY</p>
+              
+              <p className="t1 mediumgrey" style={{letterSpacing: 0.6}}>Event guests</p>
+              
               <div className="speakers-container">
                 {speakers ? speakers.map(speaker => {
                   return (

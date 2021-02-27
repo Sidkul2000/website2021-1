@@ -76,29 +76,32 @@ const Landing = ({
                 >
 
                     <div className="slogan">
-                        <p className="h0 ta-center linear-wipe">
-                            Information
+                        <p className="h0 ta-center white">
+                            Information Technology
                         </p>
                         <p className="h0 ta-center white">
-                            Technology
+                            Students Association
                         </p>
-                        <p className="h0 ta-center linear-wipe">
-                            Students
+                        <p className="h4 ta-center mediumgrey" style={{letterSpacing: 1.3, marginTop: 20, fontSize: 20}}>
+                            PVGCOET & GKPWIM
+                        </p>
+                        {/* <p className="h0 ta-center linear-wipe">
+                            get developed
                         </p>
                         <p className="h0 ta-center white">
-                            Association
-                        </p>
+                            into products
+                        </p> */}
                     </div>
 
                 </ScrollAnimation>
 
                 <ScrollAnimation 
-                    animateIn="fadeInUp"
+                    animateIn="fadeIn"
                     delay={1000}
-                    duration={1.2}
+                    duration={1}
                     animateOnce
                 >
-                    <p className="h4 blue" style={{fontWeight: 600}}>#ExploreToInspire</p>
+                    <p className="h3 blue" style={{fontWeight: 600, letterSpacing: 1}}>#ExploreToInspire</p>
                     
                 </ScrollAnimation>
 
@@ -110,7 +113,7 @@ const Landing = ({
                 >
  
                     <button className="know-more-button" onClick={goToAbout}>
-                        <p className="h5 white">Explore ITSA Activities</p>
+                        <p className="h4 white" style={{letterSpacing: 1, margin:'0px 10px'}}>Explore ITSA Activities</p>
                     </button>
 
                 </ScrollAnimation>

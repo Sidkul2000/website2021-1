@@ -8,6 +8,7 @@ import './sidebar.css'
 import { isElementInViewport } from '../../utils'
 import ITSALogo from '../../assets/logo.png'
 import { Link } from 'react-router-dom'
+import { FaMoon, FaSun } from 'react-icons/fa'
 
 const menuList = [
     {
@@ -98,7 +99,7 @@ const Sidebar = ({
             </div>
 
             <div className="app-logo-container">
-                <Toggle
+                {/* <Toggle
 					defaultChecked={theme === 'light'}
 					icons={{ 
 						checked: <Moon size={17} color="#6D6D6D" style={{position: "absolute", top: -3, transform:'rotate(90deg)', left: -2}}/>,
@@ -106,7 +107,12 @@ const Sidebar = ({
 					}}
 					className="toggle"
 					onChange={handleThemeChange} 
-				/>
+				/> */}
+
+                {
+                    theme === 'light' ? <FaMoon className="theme-icon blue" size={20} onClick={handleThemeChange}/>
+                                      : <Sun className="theme-icon yellow" size={20} onClick={handleThemeChange}/>
+                }
             </div>
 
         

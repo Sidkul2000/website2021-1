@@ -17,15 +17,40 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: space-between;
   height: 100%;
   padding: 0px 50px;
   text-align:left;
   background-color: var(--background);
 }
-.table:nth-child(even) {
-  flex-direction: row-reverse !important;
+.table.even {
+  flex-direction: row-reverse;
 }
-
+.table.even .carousel-right {
+  width: calc(40% - 30px);
+  margin-right: 20px;
+}
+/* .table.even .carousel-left {
+  align-items: flex-end;
+}
+.table.even .carousel-left .h2 {
+  text-align: right !important;
+}
+.table.even .carousel-left .horizontal {
+  justify-content: flex-end;
+}
+.table.even .speaker {
+  flex-direction: row-reverse;
+  margin-right: 0;
+  margin-left: 20px;
+}
+.table.even .speaker-photo {
+  margin-right: 0;
+  margin-left: 15px;
+}
+.table.even .speaker-info {
+  align-items: flex-end;
+} */
 
 .table h1{
   font-size: 3rem;
@@ -33,8 +58,7 @@
 }
 
 .contentcss{
-  margin-right: 5%;
-  padding: 10px;
+  padding: 10px 0;
   padding-left: 0;
 }
 
@@ -59,7 +83,8 @@
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
-  width: 60%;
+  width: calc(60% - 30px);
+  margin-right: 20px;
 }
 
 .carousel-left * {
@@ -134,7 +159,7 @@
 .other-image img, .main-image img {
   width: 100%;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 .plus-more {
   position: relative;
@@ -280,5 +305,12 @@
   }
   .speakers-container {
     flex-direction: column;
+  }
+  .table.even {
+    flex-direction: column;
+  }
+  .table.even .carousel-right {
+    width: calc(100% - 80px);
+    margin: 0 80px;
   }
 }

@@ -16,11 +16,36 @@
     background-color: transparent;
 }
 
+@keyframes opac {
+    0% { opacity: 0.4;}
+    50% { opacity: 0.8;}
+    100% { opacity: 0.4;}
+}
+
+@keyframes opac2 {
+    0% { opacity: 0.5;}
+    50% { opacity: 0.9;}
+    100% { opacity: 0.5;}
+}
+
+@keyframes opac3 {
+    0% { opacity: 0.45;}
+    50% { opacity: 0.7;}
+    100% { opacity: 0.45;}
+}
+
+@keyframes opac4 {
+    0% { opacity: 0.5;}
+    50% { opacity: 0.8;}
+    100% { opacity: 0.5;}
+}
+
 .parallax-green-large {
-    width: 7%;
+    width: 4%;
     position: absolute;
-    top: 15% !important;
-    left: 15% !important;
+    top: 8% !important;
+    left: 8% !important;
+    animation: opac 5s ease  infinite;
 }
 .parallax-green-large img {
     width: 100%;
@@ -31,6 +56,7 @@
     position: absolute;
     top: 80% !important;
     left: 75% !important;
+    animation: opac 5s ease  infinite;
 }
 .parallax-yellow-large img {
     width: 100%;
@@ -41,6 +67,7 @@
     position: absolute;
     top: 12% !important;
     left: 85% !important;
+    animation: opac2 7s ease  infinite;
 }
 .parallax-blue-large img {
     width: 100%;
@@ -51,6 +78,7 @@
     position: absolute;
     top: 70% !important;
     left: 10% !important;
+    animation: opac3 8s ease  infinite;
 }
 .parallax-grey-large img {
     width: 100%;
@@ -59,8 +87,9 @@
 .parallax-green-small {
     width: 2%;
     position: absolute;
-    top: 65% !important;
-    left: 80% !important;
+    top: 55% !important;
+    left: 85% !important;
+    animation: opac2 5s ease  infinite;
 }
 .parallax-green-small img {
     width: 100%;
@@ -71,6 +100,7 @@
     position: absolute;
     top: 45% !important;
     left: 10% !important;
+    animation: opac4 4s ease  infinite;
 }
 .parallax-yellow-small img {
     width: 100%;
@@ -82,6 +112,7 @@
     top: 85% !important;
     border-radius: 100%;
     left: 20% !important;
+    animation: opac3 7s ease  infinite;
 }
 .parallax-blue-small img {
     width: 100%;
@@ -92,6 +123,7 @@
     position: absolute;
     top: 15% !important;
     left: 70% !important;
+    animation: opac4 8s ease  infinite;
 }
 .parallax-grey-small img {
     width: 100%;
@@ -104,7 +136,7 @@
 }
 
 .landing-info {
-    width: 50%;
+    width: 60%;
     height: 100%;
     position: absolute;
     z-index: 999;
@@ -136,7 +168,7 @@
 
 .know-more-button {
     width: auto;
-    height: 45px;
+    min-height: 45px;
     border-radius: 50px;
     background-color: var(--blue);
     padding: 8px 16px;
@@ -144,7 +176,7 @@
     cursor: pointer;
     transition: 0.25s ease-in-out;
     box-shadow: 4px 4px 50px #0085FF4a;
-    background: linear-gradient(-45deg, #02b98b ,  #02a4b9 , #008CCE, #0085FF, #1578FF, #2453FF, #4B44FF,#008CCE, #02a4b9);
+    background: linear-gradient(-45deg  , #008CCE, #0085FF, #1578FF, #2453FF, #4B44FF,#008CCE);
 	background-size: 300% 300%;
 	animation: gradient 10s ease-in-out infinite;
 }
@@ -220,5 +252,8 @@
     .mobile-logo img {
         object-fit: cover;
         width: 100%;
+    }
+    #scene {
+        opacity: 0.3;
     }
 }

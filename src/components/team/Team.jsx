@@ -21,7 +21,7 @@ const Team = ({
         <div className="section-container team-container">
 
             
-            {/* <p className="h2 primary ta-center shinetext">The Complete Team</p> */}
+            <p className="h2 primary ta-center" style={{marginTop: 70}}>Complete Team</p>
             
             <div className='team-title'>
 
