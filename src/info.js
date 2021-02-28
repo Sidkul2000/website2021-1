@@ -587,7 +587,7 @@ export const fullCommitteeInfo = [
 export const teamLeadersInfo = [
     {
         title:'Sushant Vernekar',
-        image:'https://drive.google.com/open?id=119B8a9J_ljKGrPe04_1zu8m4WEmp1h0J',
+        image: sushant,
         description:'Sushant is the General Secretary of ITSA. He oversees the various ITSA activities and guides the rest of the ITSA members',
         role:'General Secretary',
         social:
@@ -600,7 +600,7 @@ export const teamLeadersInfo = [
     },
     {
         title:'Riya Parekh',
-        image:'https://drive.google.com/open?id=1CMP6_6hJEVD4jeSHY8dHC5mGHSqkI3OS',
+        image: riya,
         description:'Riya oversees ITSA activites as well as acts as a bridge between ITSA and ACES in order to coordinate activites between them',
         role:'Joint General Secretary',
         social:
@@ -613,7 +613,7 @@ export const teamLeadersInfo = [
     },
     {
         title:'Bhujang Shinde',
-        image:'https://drive.google.com/open?id=1zZ7fJ_UPxMAO4lBfJKZRuPbF91-dfP0l',
+        image: bhujang,
         description:'Bhujang is the head of the web and notification team. He plays an important role in managing the technical aspects of all ITSA events',
         role:'Head of Web & Tech',
         social:
@@ -626,7 +626,7 @@ export const teamLeadersInfo = [
     },
     {
         title:'Pranashree Patil',
-        image:'https://drive.google.com/open?id=1A6A1WR-LMUYpIBCB-G3U5i7i7IxATHTO',
+        image: pranashree,
         description:'Pranashree manages various activities falling under the notification domain. She is responsible for reaching out to sponsors, students and speading the word about our events',
         role:'Head of Notification',
         social:
@@ -639,7 +639,7 @@ export const teamLeadersInfo = [
     },
     {
         title:'Shreya Kajbaje',
-        image:'https://drive.google.com/open?id=11PzzlYXyNBr8_MgJspnfpagtQ1pfudbD',
+        image:kajbaje,
         description:'Shreya is responsible for handling the ITSA finances and budgets for the ITSA events',
         role:'Head of Finance',
         social:
@@ -652,7 +652,7 @@ export const teamLeadersInfo = [
     },
     {
         title:'Kaushal Bhandari',
-        image:'https://drive.google.com/open?id=1QzmeR79TkZK_Io2CMZ4phKLSKVGEZtKk',
+        image: kaushal, 
         description:'Kaushal oversees coordination between various groups and the students as well as poster designing and T-Shirt printing',
         role:'Head of Student Coordination & Printing',
         social:
@@ -664,7 +664,7 @@ export const teamLeadersInfo = [
     },
     {
         title:'Jui Godse',
-        image:'https://drive.google.com/open?id=1LBO24BpUFVEuTfedhSKRbwSbw3sLYGmD',
+        image: jui,
         description:'Jui is responsible for managing the event logistics as well as coordination during the day of the events',
         role:'Head of Event Management & production',
         social:

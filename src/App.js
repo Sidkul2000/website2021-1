@@ -73,7 +73,7 @@ const App = ({}) => {
             <div className="ball"></div>
         </div>
         <p className="h2 white">Just a moment..</p>
-        <p className="t0 mediumgrey" style={{marginTop: 30, fontSize:20}}>We are loading the website as fast as we can &#128516;</p>
+        {/*<p className="t0 mediumgrey" style={{marginTop: 30, fontSize:20}}>We are loading the website as fast as we can &#128516;</p>*/}
     </div>
 }
 
