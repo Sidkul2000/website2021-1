@@ -8,26 +8,26 @@ ITSA stands for Information Technology Students Association. Throughout the aced
 
 ## Website Development
 
-#### Design
+### Design
 
 Designed by [Yatish Kelkar](https://github.com/yatish1606)
 
-#### Development
+### Development
 
 Developed by 
 
-..* [Bhujang Shinde](https://github.com/shindeBhuj)
-..* [Yatish Kelkar](https://github.com/yatish1606)
-..* [Mahesh Nahak](https://github.com/maheshn22)
-..* [Gaurav Khairnar](https://github.com/gaurav1620)
-..* [Pranav Jadhav](https://github.com/pranav-jadhav)
-..* [Shreya Mahajan](https://github.com/shreyadm)
-..* [Sakshi Chidrewar](http://github.com/sakshigc)
-..* [Pruthviraj Walke](https://github.com/prathvirajwalke)
-..* [Rasika Deshpande](https://github.com/rasikadeshpande24)
-..* [Siddhant Kulkarni](https://github.com/Sidkul2000)
-..* [Shruti Salunkhe](https://github.com/shrutisubhash16)
-..* [Aadesh Jadhav](https://github.com/aadeshjadhav)
+* [Bhujang Shinde](https://github.com/shindeBhuj)
+* [Yatish Kelkar](https://github.com/yatish1606)
+* [Mahesh Nahak](https://github.com/maheshn22)
+* [Gaurav Khairnar](https://github.com/gaurav1620)
+* [Pranav Jadhav](https://github.com/pranav-jadhav)
+* [Shreya Mahajan](https://github.com/shreyadm)
+* [Sakshi Chidrewar](http://github.com/sakshigc)
+* [Pruthviraj Walke](https://github.com/prathvirajwalke)
+* [Rasika Deshpande](https://github.com/rasikadeshpande24)
+* [Siddhant Kulkarni](https://github.com/Sidkul2000)
+* [Shruti Salunkhe](https://github.com/shrutisubhash16)
+* [Aadesh Jadhav](https://github.com/aadeshjadhav)
 
 ## Contributing
 
