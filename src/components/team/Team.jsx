@@ -35,7 +35,7 @@ const Team = ({
                     
                     <div className="team-top">
                         
-                        <Link to="/teams/0">
+                        <Link to="/teams/0" target="_blank">
                             <div className='team-box tb0'>
                                 <img src={techteam}/>
                                 <Code className="primary team-icon"/>
@@ -45,7 +45,7 @@ const Team = ({
                             </div>
                         </Link>
                             
-                        <Link to="/teams/1">
+                        <Link to="/teams/1" target="_blank">
                             <div className='team-box tb1'>
                                 <img src={notteam}/>
                                 <Bell className="primary team-icon"/>
@@ -55,7 +55,7 @@ const Team = ({
                             </div>
                         </Link>
                         
-                        <Link to="/teams/2">
+                        <Link to="/teams/2" target="_blank">
                             <div className='team-box tb2'>
                                 <img src={finteam}/>
                                 <DollarSign className="primary team-icon"/>
@@ -67,7 +67,7 @@ const Team = ({
                     </div>
 
                     <div className="team-bottom">
-                        <Link to="/teams/3">
+                        <Link to="/teams/3" target="_blank">
                             <div className='team-box tb3'>
                                 <img src={printteam}/>
                                 <Layers className="primary team-icon"/>
@@ -77,7 +77,7 @@ const Team = ({
                             </div>
                         </Link>
                         
-                        <Link to="/teams/4">
+                        <Link to="/teams/4" target="_blank">
                             <div className='team-box tb4'>
                                 <img src={eventteam}/>
                                 <Film className="primary team-icon"/>

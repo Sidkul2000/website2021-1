@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# ITSA 2020-2021 Official Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live link to website](https://itsa-pvg.github.io/website2021/)
 
-## Available Scripts
+## About ITSA
 
-In the project directory, you can run:
+ITSA stands for Information Technology Students Association. Throughout the acedamic year, we conduct various events, workshops, competitions, webinars and exciting activites that enrich the student's lives and widens their knowledge bases.
 
-### `npm start`
+## Website Development
 
-Runs the app in the development mode.\
+#### Design
+
+Designed by [Yatish Kelkar](https://github.com/yatish1606)
+
+#### Development
+
+Developed by 
+
+..* [Bhujang Shinde](https://github.com/shindeBhuj)
+..* [Yatish Kelkar](https://github.com/yatish1606)
+..* [Mahesh Nahak](https://github.com/maheshn22)
+..* [Gaurav Khairnar](https://github.com/gaurav1620)
+..* [Pranav Jadhav](https://github.com/pranav-jadhav)
+..* [Shreya Mahajan](https://github.com/shreyadm)
+..* [Sakshi Chidrewar](http://github.com/sakshigc)
+..* [Pruthviraj Walke](https://github.com/prathvirajwalke)
+..* [Rasika Deshpande](https://github.com/rasikadeshpande24)
+..* [Siddhant Kulkarni](https://github.com/Sidkul2000)
+..* [Shruti Salunkhe](https://github.com/shrutisubhash16)
+..* [Aadesh Jadhav](https://github.com/aadeshjadhav)
+
+## Contributing
+
+In command line, clone this repository
+#### `git clone https://github.com/ITSA-PVG/website2021.git`
+
+Then, install required node modules
+#### `npm install`
+
+Run the app in development mode
+#### `npm start`
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+Create a pull request [here](https://github.com/ITSA-PVG/website2021/pulls) to contribute to the development.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technical
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
+This website has been created using React JS.
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+The website supports both light and default dark theme, which is implemented through [Context API](https://reactjs.org/docs/context.html).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Deployment is handled through Github pages. Check out the official [gh-pages documentation](https://pages.github.com/) to know more.
 
-### Analyzing the Bundle Size
+&copy; ITSA PVGCOET
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

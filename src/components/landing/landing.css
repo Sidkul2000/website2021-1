@@ -18,25 +18,25 @@
 
 @keyframes opac {
     0% { opacity: 0.4;}
-    50% { opacity: 0.8;}
+    50% { opacity: 0.9;}
     100% { opacity: 0.4;}
 }
 
 @keyframes opac2 {
     0% { opacity: 0.5;}
-    50% { opacity: 0.9;}
+    50% { opacity: 1;}
     100% { opacity: 0.5;}
 }
 
 @keyframes opac3 {
     0% { opacity: 0.45;}
-    50% { opacity: 0.7;}
+    50% { opacity: 0.85;}
     100% { opacity: 0.45;}
 }
 
 @keyframes opac4 {
     0% { opacity: 0.5;}
-    50% { opacity: 0.8;}
+    50% { opacity: 0.95;}
     100% { opacity: 0.5;}
 }
 
@@ -45,7 +45,7 @@
     position: absolute;
     top: 8% !important;
     left: 8% !important;
-    animation: opac 5s ease  infinite;
+    animation: opac 4s ease  infinite;
 }
 .parallax-green-large img {
     width: 100%;
@@ -67,7 +67,7 @@
     position: absolute;
     top: 12% !important;
     left: 85% !important;
-    animation: opac2 7s ease  infinite;
+    animation: opac2 5s ease  infinite;
 }
 .parallax-blue-large img {
     width: 100%;
@@ -78,7 +78,7 @@
     position: absolute;
     top: 70% !important;
     left: 10% !important;
-    animation: opac3 8s ease  infinite;
+    animation: opac3 5s ease  infinite;
 }
 .parallax-grey-large img {
     width: 100%;
@@ -89,7 +89,7 @@
     position: absolute;
     top: 55% !important;
     left: 85% !important;
-    animation: opac2 5s ease  infinite;
+    animation: opac2 4s ease  infinite;
 }
 .parallax-green-small img {
     width: 100%;
@@ -112,7 +112,7 @@
     top: 85% !important;
     border-radius: 100%;
     left: 20% !important;
-    animation: opac3 7s ease  infinite;
+    animation: opac3 6s ease  infinite;
 }
 .parallax-blue-small img {
     width: 100%;
@@ -123,7 +123,7 @@
     position: absolute;
     top: 15% !important;
     left: 70% !important;
-    animation: opac4 8s ease  infinite;
+    animation: opac4 6s ease  infinite;
 }
 .parallax-grey-small img {
     width: 100%;
