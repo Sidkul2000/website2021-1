@@ -26,7 +26,7 @@
 }
 
 .app-logo-container img {
-    width: 65%;
+    width: 50%;
     filter: contrast(1.2) saturate(1.1);
     object-fit: cover;
 }

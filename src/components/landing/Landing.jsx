@@ -32,6 +32,14 @@ const Landing = ({
         })
     }
 
+    useEffect(() => {
+        window.scroll({
+            top:0,
+            left:0,
+            behavior:'smooth'
+        })
+    }, [])
+
     return (
         <div className="section-container landing-container">
             
@@ -101,7 +109,7 @@ const Landing = ({
                     duration={1}
                     animateOnce
                 >
-                    <p className="h3 blue" style={{fontWeight: 600, letterSpacing: 1}}>#ExploreToInspire</p>
+                    <p className="h3 blue linear-wipe" style={{fontWeight: 600, letterSpacing: 1}}>#ExploreToInspire</p>
                     
                 </ScrollAnimation>
 
