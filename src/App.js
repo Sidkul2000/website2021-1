@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import { BrowserRouter , Route , Switch } from 'react-router-dom'
+import { BrowserRouter , HashRouter, Route , Switch } from 'react-router-dom'
 import { Scrollbars } from 'react-custom-scrollbars'
 
 import About from './components/about/About'
@@ -42,11 +42,15 @@ const App = ({}) => {
         
         <div>
             <ThemeProvider>
-                <BrowserRouter basename={process.env.PUBLIC_URL}>
-                    <Switch>
+            <HashRouter>
+                    {/* <Switch> */}
                        
-                       <Route path="/" exact render={props => 
-                           <Fragment>
+                       
+
+
+
+                        <Route path='/' exact={true} render={props => 
+                            <Fragment>
                                <Landing {...props}/>
                                <About {...props}/>
                                <TeamLeaders/>
@@ -54,15 +58,15 @@ const App = ({}) => {
                                <Activities {...props}/>
                                <Footer {...props}/>
                                <Sidebar/>
-                           </Fragment>
-                       }/>
+                            </Fragment>
+                        }/>
 
-                       <Route path="/teams/*" exact>
-                        <Teams />
-                       </Route>
+                        <Route path='/teams/*' exact={true} component={Teams}/>
+                            
+                        
 
-                    </Switch>
-                </BrowserRouter>
+                    {/* </Switch> */}
+                </HashRouter>
             </ThemeProvider>
             <p className="t1 ta-center mediumgrey">Designed by Yatish Kelkar</p>
             <p className="t1 ta-center mediumgrey" style={{paddingBottom: 40, marginTop: 10}}>Developed and maintained by ITSA Web and Tech team</p>

@@ -21,7 +21,7 @@ const Teams = ({
             .then(() => {
                 setImagesLoaded(true)
                 const count = parseInt(window.location.href.split('/')[5])
-                console.log(count)
+                console.log(window.location.pathname)
                 window.scroll({
                     top: window.innerHeight * count, 
                     left:0, 
