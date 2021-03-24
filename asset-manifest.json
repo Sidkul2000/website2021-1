@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/website2021/static/css/main.6a1aa702.chunk.css",
-    "main.js": "/website2021/static/js/main.7996f6f0.chunk.js",
-    "main.js.map": "/website2021/static/js/main.7996f6f0.chunk.js.map",
+    "main.js": "/website2021/static/js/main.c6413609.chunk.js",
+    "main.js.map": "/website2021/static/js/main.c6413609.chunk.js.map",
     "runtime-main.js": "/website2021/static/js/runtime-main.0462d81f.js",
     "runtime-main.js.map": "/website2021/static/js/runtime-main.0462d81f.js.map",
     "static/css/2.901ed0b3.chunk.css": "/website2021/static/css/2.901ed0b3.chunk.css",
@@ -47,6 +47,7 @@
     "static/media/gautami.fe154ccc.jpg": "/website2021/static/media/gautami.fe154ccc.jpg",
     "static/media/joglekar.af5d90bf.jpg": "/website2021/static/media/joglekar.af5d90bf.jpg",
     "static/media/jui.50cfab5b.jpg": "/website2021/static/media/jui.50cfab5b.jpg",
+    "static/media/jui_and_siddhi.0e6f9b2c.svg": "/website2021/static/media/jui_and_siddhi.0e6f9b2c.svg",
     "static/media/kajbaje.7511333a.jpg": "/website2021/static/media/kajbaje.7511333a.jpg",
     "static/media/kaushal.4e9fb331.jpg": "/website2021/static/media/kaushal.4e9fb331.jpg",
     "static/media/kurukshetra.mp4": "/website2021/static/media/kurukshetra.c94034da.mp4",
@@ -98,6 +99,6 @@
     "static/css/2.901ed0b3.chunk.css",
     "static/js/2.3af203aa.chunk.js",
     "static/css/main.6a1aa702.chunk.css",
-    "static/js/main.7996f6f0.chunk.js"
+    "static/js/main.c6413609.chunk.js"
   ]
 }
