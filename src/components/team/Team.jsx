@@ -25,12 +25,12 @@ const Team = ({
             
             <div className='team-title'>
 
-                    <ScrollAnimation 
+                    {/* <ScrollAnimation 
                         animateIn="fadeIn"
                         offset={70}
                         delay={0}
                         animateOnce
-                    >
+                    > */}
                     
                     
                     <div className="team-top">
@@ -88,7 +88,7 @@ const Team = ({
                         </Link>
                     </div>
                     
-                    </ScrollAnimation>
+                    {/* </ScrollAnimation> */}
                 
             </div>
 

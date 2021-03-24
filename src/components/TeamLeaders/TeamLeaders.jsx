@@ -6,6 +6,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import './teamleaders.css'
 import { useTheme } from '../../context/ThemeContext'
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import jui_and_siddhi from '../../assets/jui_and_siddhi.svg'
 
 
 const TeamLeaders = ({
@@ -138,7 +139,9 @@ const TeamLeaders = ({
                             <Fragment>
                             <div
                                 className={`${getIndex()[index]} outer`}
-                                style={{backgroundImage:`url(${item.image.replace('open?', 'uc?')})`}}
+                                style={{
+                                    backgroundImage: index === 4  ? `url(${jui_and_siddhi})` :  `url(${item.image.replace('open?', 'uc?')})`
+                                }}
                                 onClick={() => setActiveIndex(index)}
                             >
                                 

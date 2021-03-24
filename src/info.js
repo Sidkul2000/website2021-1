@@ -625,19 +625,6 @@ export const teamLeadersInfo = [
         
     },
     {
-        title:'Pranashree Patil',
-        image: pranashree,
-        description:'Pranashree manages various activities falling under the notification domain. She is responsible for reaching out to sponsors, students and speading the word about our events',
-        role:'Head of Notification',
-        social:
-            {
-                instagram:'https://instagram.com/pranashree_patil?igshid=7c3by2y5yngv',
-                linkedin:'https://www.linkedin.com/in/pranashree-patil-73382018a',
-                github:'https://github.com/pranashreepatil'
-            }
-        
-    },
-    {
         title:'Shreya Kajbaje',
         image:kajbaje,
         description:'Shreya is responsible for handling the ITSA finances and budgets for the ITSA events',
@@ -647,6 +634,19 @@ export const teamLeadersInfo = [
                 instagram:'https://www.instagram.com/shreya_k9_/',
                 linkedin:'https://www.linkedin.com/in/shreya-kajbaje',
                 github:'https://github.com/shreyakajbaje'
+            }
+        
+    },
+    {
+        title:'Jui Godse and Siddhi Deshmukh',
+        image: '../../assets/jui_and_siddhi.svg',
+        description:'Jui and Siddhi are responsible for managing the event logistics as well as coordination during the day of the events',
+        role:'Heads of Event Management & production',
+        social:
+            {
+                instagram:'instagram.com/juigodse',
+                linkedin:'https://www.linkedin.com/in/jui-godse-b089a71b2',
+                github:'github.com/jui221'
             }
         
     },
@@ -663,15 +663,15 @@ export const teamLeadersInfo = [
         
     },
     {
-        title:'Jui Godse',
-        image: jui,
-        description:'Jui is responsible for managing the event logistics as well as coordination during the day of the events',
-        role:'Head of Event Management & production',
+        title:'Pranashree Patil',
+        image: pranashree,
+        description:'Pranashree manages various activities falling under the notification domain. She is responsible for reaching out to sponsors, students and speading the word about our events',
+        role:'Head of Notification',
         social:
             {
-                instagram:'instagram.com/juigodse',
-                linkedin:'https://www.linkedin.com/in/jui-godse-b089a71b2',
-                github:'github.com/jui221'
+                instagram:'https://instagram.com/pranashree_patil?igshid=7c3by2y5yngv',
+                linkedin:'https://www.linkedin.com/in/pranashree-patil-73382018a',
+                github:'https://github.com/pranashreepatil'
             }
         
     },
