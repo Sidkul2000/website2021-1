@@ -16,6 +16,7 @@ import { ThemeProvider } from "./context/ThemeContext"
 import './global.css'
 import { imageAssets, videoAssets } from './info'
 import { loadImage, loadVideo } from './utils'
+import { ArrowUpLeft, ArrowUpRight, ExternalLink } from 'react-feather'
 
 
 const App = ({}) => {
@@ -68,7 +69,7 @@ const App = ({}) => {
                     {/* </Switch> */}
                 </HashRouter>
             </ThemeProvider>
-            <p className="t1 ta-center mediumgrey">Designed by Yatish Kelkar</p>
+            <p className="t1 ta-center mediumgrey">Designed by <a href="https://yatishkelkar.netlify.app/" target="_blank" className="hover-color"> Yatish Kelkar <ExternalLink className="hover-color" size={14}/> </a></p>
             <p className="t1 ta-center mediumgrey" style={{paddingBottom: 40, marginTop: 10}}>Developed and maintained by ITSA Web and Tech team</p>
         </div>
     ) 

@@ -1,7 +1,7 @@
 /* Global CSS, font styles and typefaces */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Raleway:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400&family=Work+Sans:wght@300;400;500&display=swap'); 
 html,body {
     margin: 0;
     padding: 0;
@@ -18,6 +18,11 @@ html,body {
 
 a {
     text-decoration: none;
+    color: unset;
+}
+
+a.hover-color {
+    color: var(--blue);
 }
 
 :root {
@@ -104,8 +109,8 @@ a {
 /* Normal text */
 
 .t0 {
-    font-family: Raleway;
-    font-weight: 500;
+    font-family: Work Sans, sans-serif;
+    font-weight: 400;
     font-size: 15px;
     letter-spacing: 0.7px;
     margin: 0;
@@ -114,7 +119,7 @@ a {
 }
 
 .t1 {
-    font-family: Raleway;
+    font-family: Work Sans, sans-serif;
     font-weight: 500;
     font-size: 13.5px;
     letter-spacing: 0.7px;
@@ -124,7 +129,7 @@ a {
 }
 
 .t2 {
-    font-family: Raleway;
+    font-family: Work Sans, sans-serif;
     font-weight: 500;
     font-size: 11px;
     letter-spacing: 0.9px;
@@ -331,3 +336,5 @@ a {
     from { border-color: #434343;}
     to { border-color: #878787;}
 }
+
+

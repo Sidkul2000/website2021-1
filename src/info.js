@@ -53,7 +53,7 @@ export const fullCommitteeInfo = [
         "timestamp": "2021-02-11T07:43:28.326Z",
         "emailAddress": "parekhriya15@gmail.com",
         "firstName": "Riya",
-        "lastName": "Parekh",
+        "lastName": "Parekh (AGS)",
         "class": "BE",
         "instagramHandle": "https://www.instagram.com/riyaparekh_09/",
         "linkedinHandle": "https://www.linkedin.com/in/riya-parekh-1453a2187",
@@ -173,7 +173,7 @@ export const fullCommitteeInfo = [
         "timestamp": "2021-02-17T14:37:05.642Z",
         "emailAddress": "shindenikhilm000@gmail.com",
         "firstName": "Bhujang",
-        "lastName": "Shinde",
+        "lastName": "Shinde (Head)",
         "class": "BE",
         "instagramHandle": "https://www.instagram.com/its_nik____/",
         "linkedinHandle": "https://www.linkedin.com/in/bhujang-shinde/",
@@ -260,7 +260,7 @@ export const fullCommitteeInfo = [
         "timestamp": "2021-02-12T05:02:22.372Z",
         "emailAddress": "kaushal.bhandari3@gmail.com",
         "firstName": "Kaushal",
-        "lastName": "Bhandari",
+        "lastName": "Bhandari (Head)",
         "class": "BE",
         "instagramHandle": "https://instagram.com/kaushal__bhandari?igshid=4zvmi6y2q0no",
         "linkedinHandle": "https://www.linkedin.com/in/kaushal-bhandari-2334091b2",
@@ -326,7 +326,7 @@ export const fullCommitteeInfo = [
         "timestamp": "2021-02-11T08:53:10.670Z",
         "emailAddress": "pranashreep@yahoo.com",
         "firstName": "Pranashree",
-        "lastName": "Patil",
+        "lastName": "Patil (Head)",
         "class": "BE",
         "instagramHandle": "https://instagram.com/pranashree_patil?igshid=7c3by2y5yngv",
         "linkedinHandle": "https://www.linkedin.com/in/pranashree-patil-73382018a",
@@ -398,7 +398,7 @@ export const fullCommitteeInfo = [
         "timestamp": "2021-02-13T14:53:13.355Z",
         "emailAddress": "shreyakajbaje@gmail.com",
         "firstName": "Shreya",
-        "lastName": "Kajbaje",
+        "lastName": "Kajbaje (Head)",
         "class": "BE",
         "instagramHandle": "https://www.instagram.com/shreya_k9_/",
         "linkedinHandle": "https://www.linkedin.com/in/shreya-kajbaje",
@@ -422,7 +422,7 @@ export const fullCommitteeInfo = [
         "timestamp": "2021-02-11T07:43:55.679Z",
         "emailAddress": "sushantvernekar60@gmail.com",
         "firstName": "Sushant",
-        "lastName": "Vernekar",
+        "lastName": "Vernekar (GS)",
         "class": "BE",
         "instagramHandle": "https://instagram.com/sushantvernekar?igshid=qfmnhi5zo29a",
         "linkedinHandle": "https://www.linkedin.com/in/sushant-vernekar-98a00a181/",
@@ -456,7 +456,7 @@ export const fullCommitteeInfo = [
         "timestamp": "2021-02-11T08:22:52.348Z",
         "emailAddress": "juigodse99@gmail.com",
         "firstName": "Jui",
-        "lastName": "Godse",
+        "lastName": "Godse (Head)",
         "class": "BE",
         "instagramHandle": "instagram.com/juigodse",
         "linkedinHandle": "https://www.linkedin.com/in/jui-godse-b089a71b2",
@@ -574,7 +574,7 @@ export const fullCommitteeInfo = [
         "timestamp": "2021-02-12T05:35:41.786Z",
         "emailAddress": "",
         "firstName": "Siddhi",
-        "lastName": "Deshmukh",
+        "lastName": "Deshmukh (Head)",
         "class": "BE",
         "instagramHandle": "",
         "linkedinHandle": "",
@@ -678,36 +678,70 @@ export const teamLeadersInfo = [
     
 ]
 
+var ordering = {}, sortOrder = ['BE','TE','SE']
+
+for (var i=0; i<sortOrder.length; i++)
+    ordering[sortOrder[i]] = i
+
+// somethingToSort.sort( function(a, b) {
+//     return (ordering[a.type] - ordering[b.type]) || a.name.localeCompare(b.name);
+// });
+
+const sortByClass = (a, b) => (ordering[a] - ordering[b]) || a.localeCompare(b)
+
+//fullCommitteeInfo.filter(person => person.team === 'web & tech').sort((a,b) => sortByClass(a,b))
+
 export const teamsInfo = [
     {
         teamName:'Team Web and Tech',
         description:'The web and technology team manages the official ITSA website, arranges various technical events and workshops, provides a platform for members technical growth and provides students with exposure to new technologies',
         teamColor:'#0085FF',
-        teamMembers : fullCommitteeInfo.filter(person => person.team === 'web & tech').sort((a, b) => a.class > b.class ? 1 : -1)
+       // teamMembers : fullCommitteeInfo.filter(person => person.team === 'web & tech').sort((a, b) => a.class > b.class ? 1 : -1)
+        teamMembers:  fullCommitteeInfo
+                        .filter(person => person.team === 'web & tech')
+                        .sort((a,b) => a.firstName.concat(a.lastName).length < b.firstName.concat(b.lastName).length ? 1 : -1)
+                        .sort((a,b) => sortByClass(a.class,b.class))
+                        
     },
     {
         teamName:'Team Notification',
         description:'The notification teams acts as a bridge between students and committee members, keeps participants updated about the team events and presides over solving students queries and difficulties.',
         teamColor:'#FFDB00',
-        teamMembers : fullCommitteeInfo.filter(person => person.team === 'notification').sort((a, b) => a.class > b.class ? 1 : -1)
+       // teamMembers : fullCommitteeInfo.filter(person => person.team === 'notification').sort((a, b) => a.class > b.class ? 1 : -1)
+        teamMembers:  fullCommitteeInfo
+                        .filter(person => person.team === 'notification')
+                        .sort((a,b) => a.firstName.concat(a.lastName).length < b.firstName.concat(b.lastName).length ? 1 : -1)
+                        .sort((a,b) => sortByClass(a.class,b.class))
     },
     {
         teamName:'Team Finance',
         description:'Keeps records of all financial activities. Other roles include maintaining Funds for committee and handling budgets for all events.',
         teamColor:'#7E08DA',
-        teamMembers : fullCommitteeInfo.filter(person => person.team === 'finance').sort((a, b) => a.class > b.class ? 1 : -1)
+      //  teamMembers : fullCommitteeInfo.filter(person => person.team === 'finance').sort((a, b) => a.class > b.class ? 1 : -1)
+        teamMembers:  fullCommitteeInfo
+                        .filter(person => person.team === 'finance')
+                        .sort((a,b) => a.firstName.concat(a.lastName).length < b.firstName.concat(b.lastName).length ? 1 : -1)
+                        .sort((a,b) => sortByClass(a.class,b.class))
     },
     {
         teamName:'Team Student Coordination and Printing',
         description:'Team student coordination and printing udertakes various activities such as maintaining coordination between teams, T-Shirt and poster designing, sponsorships and slot allotment during events',
         teamColor:'#02B93F',
-        teamMembers : fullCommitteeInfo.filter(person => person.team === 'student coordination').sort((a, b) => a.class > b.class ? 1 : -1)
+       // teamMembers : fullCommitteeInfo.filter(person => person.team === 'student coordination').sort((a, b) => a.class > b.class ? 1 : -1)
+        teamMembers:  fullCommitteeInfo
+                        .filter(person => person.team === 'student coordination')
+                        .sort((a,b) => a.firstName.concat(a.lastName).length < b.firstName.concat(b.lastName).length ? 1 : -1)
+                        .sort((a,b) => sortByClass(a.class,b.class))
     },
     {
         teamName:'Team Event Management and Production',
         description:'Team event management handles pre-event organization, ensuring that event day logistics run smoothly, gathering reports of executed events and activities as well as provides a platform for students to showcase their skills in photography and video editing',
         teamColor:'#0085FF',
-        teamMembers : fullCommitteeInfo.filter(person => person.team === 'event management & production').sort((a, b) => a.class > b.class ? 1 : -1)
+      //  teamMembers : fullCommitteeInfo.filter(person => person.team === 'event management & production').sort((a, b) => a.class > b.class ? 1 : -1)
+        teamMembers:  fullCommitteeInfo
+                        .filter(person => person.team === 'event management & production')
+                        .sort((a,b) => a.firstName.concat(a.lastName).length < b.firstName.concat(b.lastName).length ? 1 : -1)
+                        .sort((a,b) => sortByClass(a.class,b.class))
     },
     
 ]
