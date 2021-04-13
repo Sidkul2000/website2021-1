@@ -32,7 +32,7 @@ const TeamMember = ({
 
 				<div className="change-align">
 
-					<p className="h4 primary">{firstName} {lastName}</p>
+					<p className="h5 primary" style={{fontSize: 17, letterSpacing: 0.7, fontWeight: 500, fontFamily:'Work Sans'}}>{firstName} {lastName}</p>
 
 					<p className="t0 mediumgrey">{className}</p>
 				

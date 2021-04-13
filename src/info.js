@@ -49,18 +49,7 @@ import yatish from './assets/fullteam/yatish.jpg'
 
 
 export const fullCommitteeInfo = [
-    {
-        "timestamp": "2021-02-11T07:43:28.326Z",
-        "emailAddress": "parekhriya15@gmail.com",
-        "firstName": "Riya",
-        "lastName": "Parekh (AGS)",
-        "class": "BE",
-        "instagramHandle": "https://www.instagram.com/riyaparekh_09/",
-        "linkedinHandle": "https://www.linkedin.com/in/riya-parekh-1453a2187",
-        "githubHandle": "https://github.com/RiyaParekh1234",
-        "profilePicture": riya,
-        "team": "web & tech"
-    },
+
     {
         "timestamp": "2021-02-11T08:08:03.908Z",
         "emailAddress": "prathvirajwalke1999@gmail.com",
@@ -416,18 +405,6 @@ export const fullCommitteeInfo = [
         "linkedinHandle": "https://www.linkedin.com/in/atharva-joglekar-5057611b0",
         "githubHandle": "https://github.com/AtharvaJoglekar",
         "profilePicture": joglekar ,
-        "team": "event management & production"
-    },
-    {
-        "timestamp": "2021-02-11T07:43:55.679Z",
-        "emailAddress": "sushantvernekar60@gmail.com",
-        "firstName": "Sushant",
-        "lastName": "Vernekar (GS)",
-        "class": "BE",
-        "instagramHandle": "https://instagram.com/sushantvernekar?igshid=qfmnhi5zo29a",
-        "linkedinHandle": "https://www.linkedin.com/in/sushant-vernekar-98a00a181/",
-        "githubHandle": "https://github.com/Sushantvernekar60",
-        "profilePicture":sushant ,
         "team": "event management & production"
     },
     {
