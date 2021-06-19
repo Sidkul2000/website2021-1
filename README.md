@@ -28,13 +28,17 @@ Developed by
 ## Contributing
 
 In command line, clone this repository
-#### `git clone https://github.com/ITSA-PVG/website2021.git`
+```
+git clone https://github.com/ITSA-PVG/website2021.git
+```
 
 Then, install required node modules
-#### `npm install`
+```npm install
+```
 
 Run the app in development mode
-#### `npm start`
+```npm start
+```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
